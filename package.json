@@ -1,0 +1,43 @@
+{
+  "name": "fsv-uk",
+  "version": "1.0.0",
+  "description": "## Instalation - Clone the repository - Run `composer install` - Set `apache` to point to the `web` directory as the root directory of the project - Install Drupal using the web interface. Use the `minimal` profile",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@dev1.storytlrs.cz:clients/fsv-uk.git"
+  },
+  "keywords": [
+    "drupal"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
+    "lost": "^8.0.0",
+    "yargs": "^7.0.2",
+    "gulp-add-src": "latest",
+    "gulp-concat": "latest",
+    "gulp-if": "latest",
+    "gulp-ignore": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-jshint": "latest",
+    "gulp-livereload": "latest",
+    "gulp-merge": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-notify": "latest",
+    "gulp-postcss": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-svg-sprite": "latest",
+    "gulp-uglify": "latest",
+    "imagemin-mozjpeg": "latest",
+    "imagemin-pngquant": "latest",
+    "imagemin-svgo": "latest",
+    "jshint-stylish": "latest"
+  }
+}

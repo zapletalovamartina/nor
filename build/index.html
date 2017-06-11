@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smudi</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
+</head>
+<body>
+
+<main>    
+<div class="container">
+
+    <section class="dashboard">
+        <ul class="dashboard__list">
+            <li class="dashboard__card card">
+                <div class="card__header">
+                    <div class="card__header__bg"></div>
+                    <div class="card__header__top">
+                        <h2 class="card__header__title">Project total recall</h2>
+                        <a href="#" class="card__header__settings">settings</a>                        
+                    </div>
+                    <h3 class="card__header__subtitle">This is the description</h3>
+                </div>
+                <div class="card__main">
+                    <ul class="card__users">
+                        <li class="card__users__item">
+                            <a href="#" class="card__users__link"><img class="card__users__img" src="img/arnold.png"></a>
+                        </li>
+                        <li class="card__users__item">
+                            <a href="#" class="card__users__link"><img class="card__users__img" src="img/silvester.jpg"></a>
+                        </li>
+                        <li class="card__users__item">
+                            <a href="#" class="card__users__link card__users__link--empty">AS</a>
+                        </li>
+                        <li class="card__users__item">
+                            <a href="#" class="card__users__link"><img class="card__users__img" src="img/silvester.jpg"></a>
+                        </li>
+                        <li class="card__users__item">
+                            <a href="#" class="card__users__link card__users__link--add">add user</a>
+                        </li>
+                    </ul>
+                    <hr class="card__divider">
+                    <div class="card__stats">
+                        <span class="card__stats__desc">Board health</span>
+                        <div class="card__stats__bar">
+                            <!-- style attribute and data attribute to be added dynamically -->
+                            <span class="card__stats__percentage" data-percent="75%" style="width: 75%"></span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+</div>
+</main>
+
+</body>
+</html>

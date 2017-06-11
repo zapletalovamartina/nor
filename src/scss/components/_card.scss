@@ -1,0 +1,113 @@
+.card {
+    background-image: linear-gradient(-225deg, #06408E 0%, #1C78BF 100%);
+    color: $c1;
+
+    &__header {
+        padding: 2.4rem 3rem;
+        position: relative;
+        z-index: 0;
+        &__bg {
+            background-image: url(../img/code.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            opacity: .5;
+        }
+        &__top {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+        &__settings {
+            width: 1.6rem;
+            height: 1.6rem;
+            background-image: url(../img/settings.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-indent: -99999px;
+        }
+        &__title {
+            margin-bottom: .25em;
+        }
+        &__subtitle {
+            color: $c4;
+            margin-bottom: 0;
+        }
+    }
+    &__main {
+        padding: 2rem 3rem;        
+    }
+    &__users {
+        display: flex;
+        margin-bottom: 2rem;
+        &__item {
+            margin-right: .6rem;
+        }
+        &__img {
+            border-radius: 50%;
+        }
+        &__link {
+            width: 2.4rem;
+            height: 2.4rem;
+            display: block;
+            border-radius: 50%;
+            &--empty {
+                text-align: center;
+                background-color: $c1;
+                font-size: 1rem;
+                color: #06408E;
+                font-weight: 500;
+                line-height: 2.4rem;
+            }
+            &--add {
+                text-indent: -99999px;
+                color: $c4;
+                border: .1rem dashed $c4;
+                background-image: url(../img/plus-add-user.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+    &__divider {
+        margin: 0;
+        border: none;
+        border-bottom: .1rem solid rgba($c1, .2);
+    }
+    &__stats {
+        margin-top: 2.5rem;
+        display: flex;
+        &__desc {
+            font-size: 1.3rem;
+            padding-right: 1em;
+        }
+        &__bar {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            &:after {
+                content: '';
+                height: .1rem;
+                background-color: rgba($c1, .4);
+                flex: 1;
+            }
+        }
+        &__percentage {
+            border-radius: 10rem;
+            border: 2px solid white;
+            position: relative;
+            &:before {
+                content: attr(data-percent);
+                position: absolute;
+                font-size: 1.2rem;
+                top: -2.25rem;
+                right: -1.5rem;
+            }
+        }
+    }
+}

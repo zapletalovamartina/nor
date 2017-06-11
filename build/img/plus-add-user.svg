@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="9px" viewBox="0 0 8 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>+</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="17" font-family="Montserrat-Medium, Montserrat" font-weight="400">
+        <g id="projects-final" transform="translate(-178.000000, -525.000000)" fill="#06B2DD">
+            <g id="project" transform="translate(50.000000, 401.000000)">
+                <g id="users" transform="translate(29.000000, 116.000000)">
+                    <g id="avatar-copy" transform="translate(91.000000, 0.000000)">
+                        <text id="+">
+                            <tspan x="7.7415" y="18">+</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,38 @@
+@mixin flex-prop( $min, $max, $property: font-size, $start: 320, $end: 1200) {
+    $multiplier: ($max - $min) / ($end - $start) * 100;
+    $adder: ($min/10 * $end - $max/10 * $start) / ($end - $start);
+    $formula:  #{$multiplier + 0vw} + #{$adder + 0rem};
+    #{$property}: $min * 0.1rem;
+    @media (min-width: ($start * 0.0625em)) {
+      #{$property}: calc(#{$formula});
+      #{$property}: -webkit-calc(#{$formula});
+    }
+    
+    @media (min-width: ($end * 0.0625em)) {
+        #{$property}: $max * 0.1rem;
+    } 
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
