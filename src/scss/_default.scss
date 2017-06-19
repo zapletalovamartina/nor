@@ -26,7 +26,7 @@ body {
 }
 
 .container {
-    padding: 0;
+    padding: 0 2rem;
     max-width: $container;
     max-width: calc( #{$container} + 4rem );
     margin: auto;
@@ -61,6 +61,7 @@ h2 {
 
 h3 {
     // @include flex-prop(16,21);
+    font-weight: 700;
     font-size: 1.5rem;
     margin-bottom: .5em;
     margin-top: .75em;
@@ -97,25 +98,17 @@ a {
     text-decoration: none;
 }
 
-a:not([class]) {
-    text-decoration: underline;
-    &:hover {
-        text-decoration: none;
-    }
-}
+// a:not([class]) {
+//     text-decoration: underline;
+//     &:hover {
+//         text-decoration: none;
+//     }
+// }
 
 main {
     padding-top: 7.5rem;
     min-height: 100vh;
-}
-
-
-.lazyfade {
-    transition: .25s;
-    opacity: 0;
-    &.lazyloaded {
-        opacity: 1 !important;
-    }
+    background-color: $c5;
 }
 
 .clearfix:after,
@@ -149,22 +142,11 @@ main {
     display: none;
 }
 
-.padding {
-    padding: 4%;
-}
-
 ul {
     padding: 0;
     margin: 0;
     list-style: none;
 }
-
-// .reset-ul {
-//     padding: 0;
-//     margin: 0;
-//     list-style: none;
-//     font-size: 0;
-// }
 
 .absolute-cover {
     position: absolute;
@@ -184,58 +166,12 @@ ul {
 }
 
 @media(min-width: $headerBreak * 1em) {
-    main {
-        padding-top: 3.5rem
-    }
+    
 }
 
 @media(min-width: $lg * 1em) {
-    .side-nav {
-        display: block !important;
-        lost-column: 1/3;
-    }
-    .main-content {
-        lost-column: 2/3;
-    }
+    
 }
 
-//.lazyfade {
-//    transition: .25s;
-//    position: relative;
-//    &:before {
-//        content: '';
-//        position: absolute;
-//        top: 0;
-//        left: 0;
-//        width: 100%;
-//        height: 100%;
-//        background-color: rgba($c8, .2);
-//        transition: .25s;
-//    }
-//    &.lazyloaded {
-//        &:before {
-//            opacity: 0;
-//        }
-//    }
-//}
 
-/* ul bez tridy, tedy z wswgu */
-ul:not([class]) {
-   li {
-       text-indent: -1em;
-       padding-left: 1em;
-       list-style: none;
-
-       &:before {
-           content: '';
-           width: 6px;
-           height: 6px;
-           background-color: $c2;
-           display: inline-block;
-           border-radius: 50%;
-           margin-right: .6em;
-           margin-bottom: .1em;
-       }
-   }
-}
 

@@ -8,11 +8,43 @@
 </head>
 <body>
 
+<header class="header">
+    <div class="header__container container">
+        
+        <div class="header__links">
+            <h1 class="header__logo"><a  href="#">smudi</a></h1>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link nav__link--active">Projects</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header__user">
+            <a class="header__user__notice" href="#" data-number="4">your notices</a>
+            <a class="header__user__profile" href="#" id="js_user-menu-toggle">
+                <img class="header__user__img" src="img/arnold.png">
+                <span class="header__user__name">Arnold Schwarzeneger</span>
+            </a>
+            <div class="header__menu" id="js_user-menu">
+                <h3 class="header__menu__heading">My profile</h3>
+                <ul class="header__menu__nav">
+                    <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">Project settings</a></li>
+                    <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">Company settings</a></li>
+                </ul>
+                <a href="#" class="header__menu__logout">Logout</a>
+            </div>
+        </div>
+    </div>
+</header>
+
 <main>    
 <div class="container">
 
     <section class="dashboard">
-        <ul class="dashboard__list">
+        <ul class="dashboard__list clearfix">
             <li class="dashboard__card card">
                 <div class="card__header">
                     <div class="card__header__bg"></div>
@@ -56,5 +88,12 @@
 </div>
 </main>
 
+<script type="text/javascript">
+    var userMenuToggle = document.querySelector('#js_user-menu-toggle');
+    var userMenu = document.querySelector('#js_user-menu');
+    userMenuToggle.addEventListener("click",function(e){
+        userMenu.classList.toggle('header__menu--visible');
+    });
+</script>
 </body>
 </html>

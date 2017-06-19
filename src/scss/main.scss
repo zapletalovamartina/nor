@@ -3,6 +3,9 @@
 @import 'normalize';
 @import 'default';
 
+@import 'global/header';
+@import 'global/nav';
+
 @import 'components/dashboard';
 @import 'components/card';
 
