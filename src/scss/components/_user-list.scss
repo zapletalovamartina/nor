@@ -1,0 +1,32 @@
+.user-list {
+    display: flex;
+    margin-bottom: 2rem;
+    &__item {
+        margin-right: .6rem;
+    }
+    &__img {
+        border-radius: 50%;
+    }
+    &__link {
+        width: 2.4rem;
+        height: 2.4rem;
+        display: block;
+        border-radius: 50%;
+        &--empty {
+            text-align: center;
+            background-color: $c1;
+            font-size: 1rem;
+            color: #06408E;
+            font-weight: 500;
+            line-height: 2.4rem;
+        }
+        &--add {
+            text-indent: -99999px;
+            color: $c4;
+            border: .1rem dashed $c4;
+            background-image: url(../img/plus-add-user.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}

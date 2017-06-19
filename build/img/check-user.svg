@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="9px" viewBox="0 0 12 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="create-new-project" transform="translate(-714.000000, -517.000000)" stroke-width="2" stroke="#FFFFFF">
+            <g id="popup">
+                <g id="body" transform="translate(420.000000, 80.000000)">
+                    <g id="invite" transform="translate(160.000000, 345.000000)">
+                        <g id="users" transform="translate(50.000000, 81.000000)">
+                            <g id="avatar" transform="translate(74.880952, 0.000000)">
+                                <g transform="translate(-0.000000, 0.000000)" id="added">
+                                    <g transform="translate(-1.000000, -1.000000)">
+                                        <polyline id="Page-1" points="11.1190476 15.888735 14.2303126 19 20.5393626 12.690951"></polyline>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
