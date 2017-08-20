@@ -1,0 +1,45 @@
+.modal-general {
+    background-color: $c1;
+    border-radius: .3rem;
+    padding: 10rem 3rem;
+    position: relative;
+
+    &__close {
+        display: block;
+        position: absolute;
+        top: 2.5rem;
+        right: 2.5rem;
+        width: 2rem;
+        height: 2rem;
+        text-indent: -9999px;
+        background-image: url(../img/close-popup-dark.svg);
+        background-size: cover;
+    }
+
+    &__heading {
+        @include flex-prop(30,40);
+        font-weight: 300;
+        color: $c6;
+        text-align: center;
+        margin-bottom: .25em;
+    }
+
+    &__text-wrap {
+        color: $c9;
+        max-width: 40rem;
+        margin: auto;
+        text-align: center;
+    }
+
+    &__btn-wrap {
+        margin-top: 3.6rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn {
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+}
