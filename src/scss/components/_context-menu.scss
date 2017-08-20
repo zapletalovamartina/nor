@@ -1,0 +1,20 @@
+.context-menu {
+    padding: 3rem;
+    width: 24.5rem;
+    background-color: $c1;
+    box-shadow: $bs1;
+    border-radius: .3rem;
+    &__link {
+        color: $c6;
+        display: block;
+        transition: color .3s;
+        &:hover {
+            color: $c11
+        }
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+    }
+}

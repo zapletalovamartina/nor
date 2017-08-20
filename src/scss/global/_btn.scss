@@ -1,16 +1,17 @@
 .btn {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     font-size: 1.4rem;
     height: 3.6rem;
-    border: .1rem solid $c7;
+    border: .1rem solid $c4;
     border-radius: .3rem;
     padding: 0 1.8rem;
     cursor: pointer;
-    color: $c6;
+    color: $c4;
     background-color: transparent;
+    font-weight: 400;
 
-    &--dark {
+    &--gradient {
         color: $c1;
         background-image: $gr1;
         border-color: $c6;
@@ -20,10 +21,14 @@
     &--large {
         padding: 0 3.9rem;
         height: 5.8rem;
-        background-color: $c12;
-        color: $c1;
         font-size: 1.8rem;
+    }
+
+    &--dark {
         font-weight: 600;
         border: none;
+        color: $c1;
+        border-color: $c12;
+        background-color: $c12;        
     }
 }

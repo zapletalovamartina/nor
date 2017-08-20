@@ -52,11 +52,18 @@ h1,
     font-weight: 700;
 }
 
-h2 {
+h2,
+.h2 {
     font-weight: 500;
     // @include flex-prop(18,20);
     font-size: 2rem;
     margin-bottom: .5em;
+    &--large {
+        text-align: center;
+        @include flex-prop(24,38);        
+        font-weight: 300;
+        margin-bottom: 1.25em;
+    }
 }
 
 h3 {

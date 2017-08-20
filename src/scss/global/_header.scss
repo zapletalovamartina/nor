@@ -115,6 +115,10 @@
         }
         &__nav-link {
             display: block;
+            transition: color .3s;
+            &:hover {
+                color: $c11
+            }
         }
         &__logout {
             font-size: 1.4rem;

@@ -1,4 +1,5 @@
 .user-list {
+    $this: &;
     display: flex;
     margin-bottom: 2rem;
     &__item {
@@ -10,8 +11,10 @@
     &__link {
         width: 2.4rem;
         height: 2.4rem;
-        display: block;
         border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         &--empty {
             text-align: center;
             background-color: $c1;
@@ -21,12 +24,20 @@
             line-height: 2.4rem;
         }
         &--add {
-            text-indent: -99999px;
             color: $c4;
+            transition: all .3s;
             border: .1rem dashed $c4;
-            background-image: url(../img/plus-add-user.svg);
-            background-repeat: no-repeat;
-            background-position: center;
+            &:hover {
+                border-style: solid;
+                border-color: $c11;
+                background-color: $c11;
+                #{$this}__plus {
+                    stroke: $c1;
+                }
+            }
         }
+    }
+    &__plus {
+        stroke: $c11;
     }
 }
