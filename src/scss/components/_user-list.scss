@@ -4,9 +4,38 @@
     margin-bottom: 2rem;
     &__item {
         margin-right: .6rem;
+        display: flex;
+        position: relative;
     }
     &__img {
         border-radius: 50%;
+    }
+    &__hover {
+        display: none;
+        position: absolute;
+        top: -1rem;
+        transform: translateY(-100%);
+        left: 50%;
+        transform: translate(-50%, -100%);
+        font-size: 1.2rem;
+        background-color: rgba($c13, .9);
+        padding: .6rem 1rem;
+        white-space: nowrap;
+        border-radius: .3rem;
+        color: $c1;
+        z-index: 1;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -7px;
+            left: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 5px 0 5px;
+            border-color: rgba($c13, .9) transparent transparent transparent;
+        }
     }
     &__link {
         width: 2.4rem;
@@ -15,6 +44,33 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+        &:hover {
+            &:before {
+                font-size: 1.2rem;
+                background-color: rgba($c13, .9);
+                content: attr(data-name);
+                position: absolute;
+                top: -40px;
+                padding: .6rem 1rem;
+                white-space: nowrap;
+                border-radius: .3rem;
+                color: $c1;
+                z-index: 1;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                right: 1.25rem;
+                top: -9px;
+                left: 6.5px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 5px 5px 0 5px;
+                border-color: rgba($c13, .9) transparent transparent transparent;
+            }
+        }
         &--empty {
             text-align: center;
             background-color: $c1;
@@ -27,6 +83,10 @@
             color: $c4;
             transition: all .3s;
             border: .1rem dashed $c4;
+            &:before,
+            &:after {
+                display: none;
+            }
             &:hover {
                 border-style: solid;
                 border-color: $c11;
@@ -34,6 +94,20 @@
                 #{$this}__plus {
                     stroke: $c1;
                 }
+            }
+        }
+        &--more {
+            width: auto;
+            height: auto;
+            font-size: 1.2rem;
+            text-decoration: underline;
+            margin-left: .6rem;
+            &:before,
+            &:after {
+                display: none;
+            }
+            &:hover + ul {
+                display: block;
             }
         }
     }
