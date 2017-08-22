@@ -2,10 +2,86 @@
     $this: &;
     display: flex;
     margin-bottom: 2rem;
+    &--centered {
+        justify-content: center;
+    }
+    &--modal-margin {
+        margin: 1rem 0;
+    }
+    &--large {
+        #{$this}__link {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
     &__item {
         margin-right: .6rem;
         display: flex;
         position: relative;
+        &:hover {
+            &:before {
+                font-size: 1.2rem;
+                background-color: rgba($c13, .9);
+                content: attr(data-name);
+                position: absolute;
+                top: -40px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: .6rem 1rem;
+                white-space: nowrap;
+                border-radius: .3rem;
+                color: $c1;
+                z-index: 1;
+                line-height: $lineheight;
+                font-weight: 400;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                right: 1.25rem;
+                top: -9px;
+                left: 6.5px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 5px 5px 0 5px;
+                border-color: rgba($c13, .9) transparent transparent transparent;
+            }
+        }
+        &--add {
+            color: $c4;
+            transition: all .3s;
+            border: .1rem dashed $c4;
+            border-radius: 50%;
+            &:before,
+            &:after {
+                display: none;
+            }
+            &:hover {
+                border-style: solid;
+                border-color: $c11;
+                background-color: $c11;
+                #{$this}__plus {
+                    stroke: $c1;
+                }
+            }
+        }
+        &--more {
+            &:before,
+            &:after {
+                display: none;
+            }
+            #{$this}__link {                
+                width: auto;
+                height: auto;
+                font-size: 1.2rem;
+                text-decoration: underline;
+                margin-left: .6rem;
+                &:hover + ul {
+                    display: block;
+                }
+            }
+        }
     }
     &__img {
         border-radius: 50%;
@@ -45,32 +121,7 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        &:hover {
-            &:before {
-                font-size: 1.2rem;
-                background-color: rgba($c13, .9);
-                content: attr(data-name);
-                position: absolute;
-                top: -40px;
-                padding: .6rem 1rem;
-                white-space: nowrap;
-                border-radius: .3rem;
-                color: $c1;
-                z-index: 1;
-            }
-            &:after {
-                content: '';
-                position: absolute;
-                right: 1.25rem;
-                top: -9px;
-                left: 6.5px;
-                width: 0;
-                height: 0;
-                border-style: solid;
-                border-width: 5px 5px 0 5px;
-                border-color: rgba($c13, .9) transparent transparent transparent;
-            }
-        }
+        
         &--empty {
             text-align: center;
             background-color: $c1;
@@ -78,36 +129,43 @@
             color: #06408E;
             font-weight: 500;
             line-height: 2.4rem;
+            box-shadow: $bs2;
         }
-        &--add {
-            color: $c4;
-            transition: all .3s;
-            border: .1rem dashed $c4;
-            &:before,
-            &:after {
-                display: none;
-            }
+        &--addable {
             &:hover {
-                border-style: solid;
-                border-color: $c11;
-                background-color: $c11;
-                #{$this}__plus {
-                    stroke: $c1;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    top: 0;
+                    left: 0;
+                    background-image: url(../img/plus-add-user-popup.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-color: rgba($c6, .5);                
                 }
             }
         }
-        &--more {
-            width: auto;
-            height: auto;
-            font-size: 1.2rem;
-            text-decoration: underline;
-            margin-left: .6rem;
-            &:before,
-            &:after {
-                display: none;
+        &--added {
+            &:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-image: url(../img/check-user.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: rgba($c10, .7);
             }
-            &:hover + ul {
-                display: block;
+            &:hover {
+                &:before {
+                    background-image: url(../img/plus-add-user-popup.svg);
+                    background-color: rgba($c6, .5);
+                    transform: rotate(45deg);
+                }
             }
         }
     }
