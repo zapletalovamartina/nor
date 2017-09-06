@@ -1,0 +1,76 @@
+.notifications {
+    background-color: $c1;
+    box-shadow: $bs1;
+    padding: 3rem;
+
+    &__item {
+        padding: 1.2rem 0;
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+        &:not(:last-child) {
+            border-bottom: .1rem solid $c14;
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: .9rem;
+    }
+
+    &__date {
+        font-size: 1.2rem;
+        color: $c4;
+    }
+
+    &__project {
+        font-size: 1.2rem;
+        color: $c9;
+        text-align: right;
+    }
+
+    &__img {
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        margin-right: .6rem;
+    }
+
+    &__body {
+        display: flex;
+    }
+
+    &__text {
+        font-size: 1.3rem;
+        line-height: 1.23;
+        padding-top: .1rem;
+        margin-right: 2rem;
+    }
+
+    &__btns {
+        display: flex;
+    }
+
+    &__btn {
+        &:first-child {
+            margin-right: .6rem;
+        }
+    }
+
+    &__link {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__bottom-btn {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+    }
+}

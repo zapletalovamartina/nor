@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smudi</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
+</head>
+<body>
+
+@@include('./inc/_header.tpl.html')
+
+<main>    
+<div class="container">
+
+    <section class="dashboard">
+        <ul class="dashboard__list clearfix">
+            
+            @@include('./inc/_card.tpl.html'
+
+        </ul>
+    </section>
+    
+    <div class="modal" id="js_modal">
+        
+        <section class="modal-general">
+            <a class="modal-general__close" href="#" id="js_modal-close">close</a>
+            <div class="modal-general__header">
+                <div class="modal-general__text-wrap">                        
+                    <h2 class="modal-general__heading">Are you sure?</h2>
+                    <p class="">Deleting is permanent, you won’t be able to reach this project anymore.</p>
+                </div>
+                <div class="modal-general__btn-wrap">
+                    <a class="modal-general__btn btn btn--large btn--dark">Yes</a>
+                    <a class="modal-general__btn btn btn--large">No</a>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+</div>
+</main>
+
+<script type="text/javascript">
+    var userMenuToggle = document.querySelector('#js_user-menu-toggle');
+    var userMenu = document.querySelector('#js_user-menu');
+    userMenuToggle.addEventListener("click",function(e){
+        userMenu.classList.toggle('header__menu--visible');
+    });
+    var modal = document.querySelector('#js_modal');
+    var modalClose = document.querySelector('#js_modal-close');
+    modalClose.addEventListener("click",function(e){
+        modal.classList.add('modal--hidden');
+    });
+</script>
+</body>
+</html>

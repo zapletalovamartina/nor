@@ -18,6 +18,9 @@ var argv = require('yargs').argv;
 var imagemin = require('gulp-imagemin');
 var imageminMozjpeg = require('imagemin-mozjpeg');
 var imageminSvgo = require('imagemin-svgo');
+var fileinclude = require('gulp-file-include');
+var path = require("path");
+var rename = require('gulp-rename');
 
 var paths = {
     css: {
@@ -26,14 +29,31 @@ var paths = {
         watch: 'src/scss/**/*.scss',
     },
     js: {
-        src: 'web/themes/custom/fsv_uk/src/js/**/*.js',
-        dest: 'web/themes/custom/fsv_uk/js/'
+        src: '',
+        dest: ''
     },
     img: {
-        src: 'web/themes/custom/fsv_uk/src/images/**/*',
-        dest: 'web/themes/custom/fsv_uk/images/'
+        src: '',
+        dest: ''
     },
+    tpl : {
+        src: 'src/tpl/**/',
+        dest: 'build/'
+    }
 };
+
+gulp.task('fileinclude', function() {
+  return  gulp.src(path.join(paths.tpl.src, '*.tpl.html'))
+    .pipe(fileinclude())
+    .pipe(rename({
+      extname: ""
+     }))
+    .pipe(rename({
+      extname: ".html"
+     }))
+    .pipe(gulp.dest(paths.tpl.dest))
+    .pipe(plugins.livereload())
+});
 
 gulp.task('css', function () {
     var output = 'main.css';
@@ -84,13 +104,15 @@ gulp.task('img', function () {
 
 gulp.task('build', [
     'css',
+    'fileinclude'
     // 'js',
     // 'img'
 ]);
 
 gulp.task('default', ['build'], function () {
     gulp.watch(paths.css.watch, ['css']);
-    gulp.watch(paths.js.src, ['js']);
+    gulp.watch(path.join(paths.tpl.src, '**/*.html'), ['fileinclude']);
+    // gulp.watch(paths.js.src, ['js']);
     //gulp.watch(paths.img.src, ['img']);
     plugins.livereload.listen()
 });

@@ -84,7 +84,7 @@
         }
     }
     &__menu {
-        box-shadow: 0 20px 40px 0 rgba(6,21,41,0.12);
+        box-shadow: $bs1;
         position: absolute;
         right: 0;
         top: 4.9rem;
@@ -95,6 +95,7 @@
         visibility: hidden;
         opacity: 0;
         transition: all .4s;
+        z-index: 1;
         &--visible {
             opacity: 1;
             visibility: visible;
@@ -137,6 +138,24 @@
                 margin-right: .5rem;
                 vertical-align: sub;
             }
+        }
+    }
+    &__notifications {
+        position: absolute;
+        top: 7.1rem;
+        z-index: 1;
+        text-indent: 0;
+        width: 46rem;
+        max-width: 100%;
+        right: 0;
+        transform: translateY(20px);
+        visibility: hidden;
+        opacity: 0;
+        transition: all .4s;
+        &--visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
         }
     }
 }

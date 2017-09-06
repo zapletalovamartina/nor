@@ -24,20 +24,106 @@
         </div>
 
         <div class="header__user">
-            <a class="header__user__notice" href="#" data-number="4">your notices</a>
+
+            <a class="header__user__notice js_notifications-toggle" href="#" data-number="4">
+                your notices
+            </a>
+
             <a class="header__user__profile" href="#" id="js_user-menu-toggle">
+
                 <img class="header__user__img" src="img/arnold.png">
                 <span class="header__user__name">Arnold Schwarzeneger</span>
+
+                <div class="header__menu" id="js_user-menu">
+                    <h3 class="header__menu__heading">My profile</h3>
+                    <ul class="header__menu__nav">
+                        <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">Project settings</a></li>
+                        <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">Company settings</a></li>
+                    </ul>
+                    <a href="#" class="header__menu__logout">Logout</a>
+                </div>
+                
             </a>
-            <div class="header__menu" id="js_user-menu">
-                <h3 class="header__menu__heading">My profile</h3>
-                <ul class="header__menu__nav">
-                    <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">Project settings</a></li>
-                    <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">Company settings</a></li>
-                </ul>
-                <a href="#" class="header__menu__logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="header__notifications js_notifications">
+        <div class="notifications">
+            <ul class="notifications__list">
+
+                <li class="notifications__item">
+                    <div class="notifications__top">
+                        <div class="notifications__date">Today 09:37</div>
+                        <div class="notifications__project">Project total recall</div>
+                    </div>
+                    <div class="notifications__body">
+                        <img class="notifications__img" src="img/silvester.jpg">
+                        <div class="notifications__text"><strong class="notifications__user">Jack Nicholson</strong> just invited you to a project <a href="#" class="notifications__link"><strong>Totall recall</strong></a></div>
+                        <div class="notifications__btns">
+                            <a class="btn-round notifications__btn">
+                                <span class="visually-hidden">accept</span>
+                                <svg width="12" height="9" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 4l3 3L10.5.7" stroke-width="2" fill="none" fill-rule="evenodd"/>
+                                </svg>
+                            </a>
+                            <a class="btn-round btn-round--decline notifications__btn">
+                                <span class="visually-hidden">decline</span>
+                                <svg width="9" height="9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.4 9.4"><path d="M9.4 1.4L8 0 4.7 3.3 1.4 0 0 1.4l3.3 3.3L0 8l1.4 1.4L4.7 6 8 9.5 9.4 8 6 4.7z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="notifications__item">
+                    <div class="notifications__top">
+                        <div class="notifications__date">Today 10:01</div>
+                        <div class="notifications__project">Project total recall</div>
+                    </div>
+                    <div class="notifications__body">
+                        <img class="notifications__img" src="img/silvester.jpg">
+                        <div class="notifications__text"><strong class="notifications__user">Jack Nicholson</strong>  just finished a task <a href="#" class="notifications__link"><strong>Prepare design specs</strong></a></div>
+                    </div>
+                </li>
+
+                <li class="notifications__item">
+                    <div class="notifications__top">
+                        <div class="notifications__date">Today 09:37</div>
+                        <div class="notifications__project">Project total recall</div>
+                    </div>
+                    <div class="notifications__body">
+                        <img class="notifications__img" src="img/silvester.jpg">
+                        <div class="notifications__text"><strong class="notifications__user">Jack Nicholson</strong> just invited you to a project <a href="#" class="notifications__link"><strong>Totall recall</strong></a></div>
+                        <div class="notifications__btns">
+                            <a class="btn-round notifications__btn">
+                                <span class="visually-hidden">accept</span>
+                                <svg width="12" height="9" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg"><title>Page 1</title><path d="M1 4l3 3L10.5.7" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+                            </a>
+                            <a class="btn-round btn-round--decline notifications__btn">
+                                <span class="visually-hidden">decline</span>
+                                <svg width="9" height="9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.4 9.4"><path d="M9.4 1.4L8 0 4.7 3.3 1.4 0 0 1.4l3.3 3.3L0 8l1.4 1.4L4.7 6 8 9.5 9.4 8 6 4.7z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="notifications__item">
+                    <div class="notifications__top">
+                        <div class="notifications__date">Today 10:01</div>
+                        <div class="notifications__project">Project total recall</div>
+                    </div>
+                    <div class="notifications__body">
+                        <img class="notifications__img" src="img/silvester.jpg">
+                        <div class="notifications__text"><strong class="notifications__user">Jack Nicholson</strong>  just finished a task <a href="#" class="notifications__link"><strong>Prepare design specs</strong></a></div>
+                    </div>
+                </li>
+
+            </ul>
+
+            <div class="notifications__bottom-btn">
+                <a href="#" class="btn btn--dark-outline">Show all notifications</a>                
             </div>
         </div>
+
     </div>
 </header>
 

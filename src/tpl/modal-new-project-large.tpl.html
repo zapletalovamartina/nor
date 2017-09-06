@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smudi</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+</head>
+<body>
+
+@@include('./inc/_header.tpl.html')
+
+<main>    
+<div class="container">
+
+    <section class="dashboard">
+        <ul class="dashboard__list clearfix">
+            
+            @@include('./inc/_card.tpl.html')
+
+        </ul>
+    </section>
+
+    <div class="modal" id="js_modal">
+        
+        <section class="new-project">
+            <a class="new-project__close" href="#" id="js_modal-close">close</a>
+            <form>
+                <div class="new-project__header">
+                    <h2 class="new-project__heading">Create new project</h2>
+                    <div class="new-project__input-wrap">                        
+                        <label for="new-project-name" class="visually-hidden">Add a project name</label>
+                        <input type="text" name="new-project-name" id="new-project-name" placeholder="Add a project name">
+                    </div>
+                    <div class="new-project__input-wrap">                        
+                        <label for="new-project-description" class="visually-hidden">Add a description (optional)</label>
+                        <input type="text" name="new-project-description" id="new-project-description" placeholder="Add a description (optional)">
+                    </div>
+                </div>
+                <div class="new-project__main">
+                    <h3 class="new-project__subheading">Invite users</h3>
+                    <div class="new-project__label">Invite your latest colaborators:</div>
+                    <ul class="new-project__users">
+                        <li class="new-project__users__item">
+                            <input class="new-project__users__checkbox visually-hidden" type="checkbox" name="user-1" id="user-1">
+                            <label class="new-project__users__label" style="background-image: url(img/arnold.png)" title="Arnold Schwarzeneger" for="user-1">Arnold Schwarzeneger</label>
+                        </li>
+                        <li class="new-project__users__item">
+                            <input class="new-project__users__checkbox visually-hidden" type="checkbox" name="user-2" id="user-2">
+                            <label class="new-project__users__label" style="background-image: url(img/arnold.png)" title="Arnold Schwarzeneger" for="user-2">Arnold Schwarzeneger</label>
+                        </li>
+                        <li class="new-project__users__item">
+                            <input class="new-project__users__checkbox visually-hidden" type="checkbox" name="user-3" id="user-3">
+                            <label class="new-project__users__label" style="background-image: url(img/arnold.png)" title="Arnold Schwarzeneger" for="user-3">Arnold Schwarzeneger</label>
+                        </li>
+                        <li class="new-project__users__item">
+                            <input class="new-project__users__checkbox visually-hidden" type="checkbox" name="user-4" id="user-4">
+                            <label class="new-project__users__label" style="background-image: url(img/arnold.png)" title="Arnold Schwarzeneger" for="user-4">Arnold Schwarzeneger</label>
+                        </li>                        
+                    </ul>
+
+                    <a class="new-project__link" href="#">Show all team members</a>
+
+                    <div class="new-project__input-wrap">                        
+                        <label for="new-project-description">Invite new users:</label>
+                        <input type="text" name="new-project-description" class="dark" id="new-project-description" placeholder="Emails (separated by a comma)">
+                    </div>
+                    
+                    <div class="new-project__settings">
+                        <div class="new-project__settings__wrap">
+
+                            <input class="visually-hidden new-project__settings__radio" type="radio" name="visibility" value="public" id="public" checked>
+                            <label class="new-project__settings__label btn" for="public">
+                                <svg class="new-project__settings__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                  <g fill-rule="evenodd">
+                                    <circle cx="8" cy="8" r="7.5"/>
+                                    <ellipse cx="8" cy="8" rx="2.5" ry="7.5"/>
+                                    <path d="M2 11.5h12M1 8h14M2 4.5h12" stroke-linecap="square"/>
+                                  </g>
+                                </svg>
+                                Public
+                            </label>
+                            <input class="visually-hidden new-project__settings__radio" type="radio" name="visibility" value="private" id="private">
+                            <label class="new-project__settings__label btn" for="private">
+                                <svg class="new-project__settings__icon" width="13" height="16" viewBox="0 0 13 16" xmlns="http://www.w3.org/2000/svg">
+                                  <g fill-rule="evenodd">
+                                    <path class="new-project__settings__icon--fill" d="M7 11.915c.583-.206 1-.762 1-1.415C8 9.672 7.328 9 6.5 9S5 9.672 5 10.5c0 .653.417 1.21 1 1.415V13.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.585zM2 6h9c1.105 0 2 .895 2 2v6c0 1.105-.895 2-2 2H2c-1.105 0-2-.895-2-2V8c0-1.105.895-2 2-2z" />
+                                    <path d="M10.5 4.503V4.5c0-2.21-1.79-4-4-4s-4 1.79-4 4l8 .003z" />
+                                  </g>
+                                </svg>
+                                Private
+                            </label>
+                            
+                        </div>
+                        <p class="new-project__settings__notice">The board is set as public. It will be visible to everyone in your team.</p>
+                    </div>
+
+                    <input class="new-project__submit btn btn--large btn--dark" type="submit" value="Let’s start!">
+
+                </div>
+            </form>
+        </section>
+        
+    </div>
+
+</div>
+</main>
+
+<script type="text/javascript">
+    var userMenuToggle = document.querySelector('#js_user-menu-toggle');
+    var userMenu = document.querySelector('#js_user-menu');
+    userMenuToggle.addEventListener("click",function(e){
+        userMenu.classList.toggle('header__menu--visible');
+    });
+    var modal = document.querySelector('#js_modal');
+    var modalClose = document.querySelector('#js_modal-close');
+    modalClose.addEventListener("click",function(e){
+        modal.classList.add('modal--hidden');
+    });
+</script>
+</body>
+</html>

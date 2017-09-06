@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smudi</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+</head>
+<body>
+
+@@include('./inc/_header.tpl.html')
+
+<main>    
+<div class="container">
+
+    <section class="dashboard">
+        <ul class="dashboard__list clearfix"> 
+
+            @@include('./inc/_card.tpl.html')           
+            @@include('./inc/_card.tpl.html')           
+            @@include('./inc/_card.tpl.html')           
+            @@include('./inc/_card.tpl.html')           
+            
+            <a href="#" class="dashboard__card card card--empty">
+                + Create new project                
+            </a>
+
+        </ul>
+    </section>
+
+</div>
+</main>
+
+<script type="text/javascript">
+    var userMenuToggle = document.querySelector('#js_user-menu-toggle');
+    var userMenu = document.querySelector('#js_user-menu');
+    userMenuToggle.addEventListener("click",function(e){
+        userMenu.classList.toggle('header__menu--visible');
+    });
+
+    var contextMenu = document.querySelector('.js_context-menu');
+    var contextMenuToggle = document.querySelector('.js_context-menu-toggle');
+    contextMenuToggle.addEventListener("click",function(e){
+        contextMenu.classList.toggle('card__header__menu--visible');
+    });
+
+    var notifications = document.querySelector('.js_notifications');
+    var notificationsToggle = document.querySelector('.js_notifications-toggle');
+    notificationsToggle.addEventListener("click",function(e){
+        notifications.classList.toggle('header__notifications--visible');
+    });
+</script>
+</body>
+</html>

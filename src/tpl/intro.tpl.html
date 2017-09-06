@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smudi</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+</head>
+<body>
+
+@@include('./inc/_header.tpl.html')
+
+<main>    
+<div class="container">
+
+    <section class="dashboard">
+        <h2 class="h2--large">Welcome to Smudi</h2>
+        <ul class="dashboard__list clearfix">
+            <a href="#" class="dashboard__card card card--empty card--standalone">
+                + Start by creating your first project                
+            </a>
+        </ul>
+    </section>
+
+</div>
+</main>
+
+<script type="text/javascript">
+    var userMenuToggle = document.querySelector('#js_user-menu-toggle');
+    var userMenu = document.querySelector('#js_user-menu');
+    userMenuToggle.addEventListener("click",function(e){
+        userMenu.classList.toggle('header__menu--visible');
+    });
+    var modal = document.querySelector('#js_modal');
+    var modalClose = document.querySelector('#js_modal-close');
+    modalClose.addEventListener("click",function(e){
+        modal.classList.add('modal--hidden');
+    });
+</script>
+</body>
+</html>

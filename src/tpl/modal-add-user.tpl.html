@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smudi</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+</head>
+<body>
+
+@@include('./inc/_header.tpl.html')
+
+<main>    
+<div class="container">
+
+    <section class="dashboard">
+        <ul class="dashboard__list clearfix">
+            
+            @@include('./inc/_card.tpl.html')
+            
+            <a href="#" class="dashboard__card card card--empty">
+                + Create new project                
+            </a>
+        </ul>
+    </section>
+
+    <div class="modal" id="js_modal">
+        
+        <section class="modal-general">
+            <a class="modal-general__close" href="#" id="js_modal-close">close</a>
+
+            <div class="modal-general__text-wrap">
+                <h2 class="modal-general__heading modal-general__heading--mb">Invite users</h2>
+                <p class="modal-general__subheading">Invite your latest colaborators:</p>
+            </div>
+
+            <ul class="user-list user-list--large user-list--centered user-list--modal-margin">
+                <li class="user-list__item" data-name="Invite Someone Else">
+                    <a href="#" class="user-list__link user-list__link--addable" ><img class="user-list__img" src="img/arnold.png"></a>
+                </li>
+                <li class="user-list__item" data-name="Remove Silvester Stallone">
+                    <a href="#" class="user-list__link user-list__link--added" ><img class="user-list__img" src="img/silvester.jpg"></a>
+                </li>
+                <li class="user-list__item" data-name="Invite Someone Else">
+                    <a href="#" class="user-list__link user-list__link--addable" ><img class="user-list__img" src="img/arnold.png"></a>
+                </li>
+                <li class="user-list__item" data-name="Remove Silvester Stallone">
+                    <a href="#" class="user-list__link user-list__link--added" ><img class="user-list__img" src="img/silvester.jpg"></a>
+                </li>                
+            </ul>
+
+            <a class="modal-general__link" href="#">Show all team members</a>
+
+            <div class="modal-general__input-wrap">                        
+                <label for="new-project-description">Invite new users:</label>
+                <input type="text" name="new-project-description" class="dark" id="new-project-description" placeholder="Emails (separated by a comma)">
+            </div>
+            
+            <div class="modal-general__btn-wrap">
+                <a href="#" class="btn btn--large btn--dark">Send invitation</a>
+            </div>            
+
+
+        </section>
+        
+    </div>
+
+</div>
+</main>
+
+<script type="text/javascript">
+    var userMenuToggle = document.querySelector('#js_user-menu-toggle');
+    var userMenu = document.querySelector('#js_user-menu');
+    userMenuToggle.addEventListener("click",function(e){
+        userMenu.classList.toggle('header__menu--visible');
+    });
+    var modal = document.querySelector('#js_modal');
+    var modalClose = document.querySelector('#js_modal-close');
+    modalClose.addEventListener("click",function(e){
+        modal.classList.add('modal--hidden');
+    });
+</script>
+</body>
+</html>

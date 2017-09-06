@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smudi</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
+</head>
+<body>
+
+@@include('./inc/_header.tpl.html')
+
+<main>    
+<div class="container">
+
+    <section class="dashboard">
+        <ul class="dashboard__list clearfix">
+            
+            @@include('./inc/_card.tpl.html')
+
+        </ul>
+    </section>
+    
+    <div class="modal">
+        
+        <section class="new-project">
+            <a class="new-project__close" href="#" id="js_modal-close">close</a>
+            <form>
+                <div class="new-project__header">
+                    <h2 class="new-project__heading">Create new project</h2>
+                    <div class="new-project__input-wrap"> 
+                        <label for="new-project-name" class="visually-hidden">Add a project name</label>
+                        <input type="text" name="new-project-name" id="new-project-name" placeholder="Add a project name">
+                    </div>
+                </div>
+            </form>
+        </section>
+        
+    </div>
+
+</div>
+</main>
+
+<script type="text/javascript">
+    var userMenuToggle = document.querySelector('#js_user-menu-toggle');
+    var userMenu = document.querySelector('#js_user-menu');
+    userMenuToggle.addEventListener("click",function(e){
+        userMenu.classList.toggle('header__menu--visible');
+    });
+</script>
+</body>
+</html>

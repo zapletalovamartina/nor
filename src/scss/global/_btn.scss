@@ -31,4 +31,53 @@
         border-color: $c12;
         background-color: $c12;        
     }
+
+    &--dark-outline {
+        color: $c12;
+        border-color: $c12;
+    }
+
+}
+
+.btn-round {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3rem;
+    min-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: .1rem solid $c4;
+    cursor: pointer;
+    transition: all .3s;
+
+    svg {
+        transition: stroke .3s;
+        stroke: $c4;
+    }
+
+    &:hover {
+        background-color: $c12;
+        border-color: $c12;
+        svg {
+            stroke: $c1;
+        }
+    }
+
+    &--decline {
+        svg {
+            stroke: none;
+            fill: $c4;
+        }
+        &:hover {
+            background-color: $c12;
+            border-color: $c12;
+            svg {
+                stroke: none;
+                fill: $c1;
+            }
+        }
+    }
+
 }
