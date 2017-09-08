@@ -1,0 +1,66 @@
+.modal-tabbed {
+    width: 80rem;
+    border-radius: .3rem;
+    &__header {
+        padding: 0 1.5rem;
+        background-image: $gr1;
+        position: relative;
+    }
+    &__close {
+        display: block;
+        position: absolute;
+        top: 2.7rem;
+        right: 2.5rem;
+        width: 2rem;
+        height: 2rem;
+        text-indent: -9999px;
+        background-image: url(../img/close-popup.svg);
+        background-size: cover;
+    }
+    &__btn {
+        font-size: 1.3rem;
+        color: rgba($c1, .8);
+        height: 7.5rem;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        &:not(:last-child) {
+            margin-right: 2.5rem;
+        }
+        &[aria-selected='true'] {
+            font-weight: 500;
+            border-bottom: .3rem solid $c11;
+        }
+    }
+    &__ico {
+        display: none;
+        margin-right: 1rem;
+    }
+    &__tab {
+        display: none;
+        background-color: $c1;
+        padding: 2rem;
+        &[aria-hidden='false'] {
+            display: block;
+        }
+    }
+    @media(min-width: $sm * 1em) {
+        &__ico {
+            display: block;
+        }
+    }
+    @media(min-width: $md * 1em) {
+        &__header {
+            padding: 0 3rem;
+        }
+        &__tab {
+            padding: 4rem;
+        }
+        &__btn {
+            font-size: 1.6rem;
+            &:not(:last-child) {
+                margin-right: 4.5rem;
+            }
+        }
+    }
+}

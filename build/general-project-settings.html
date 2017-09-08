@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smudi</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__container container">
+        
+        <div class="header__links">
+            <h1 class="header__logo"><a  href="#">smudi</a></h1>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link nav__link--active">Projects</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header__user">
+
+            <a class="header__user__notice js_notifications-toggle" href="#" data-number="4">
+                your notices
+            </a>
+
+            <a class="header__user__profile" href="#" id="js_user-menu-toggle">
+
+                <img class="header__user__img" src="img/arnold.png">
+                <span class="header__user__name">Arnold Schwarzeneger</span>
+
+                <div class="header__menu" id="js_user-menu">
+                    <h3 class="header__menu__heading">My profile</h3>
+                    <ul class="header__menu__nav">
+                        <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">Project settings</a></li>
+                        <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">Company settings</a></li>
+                    </ul>
+                    <a href="#" class="header__menu__logout">Logout</a>
+                </div>
+                
+            </a>
+        </div>
+    </div>
+
+    <div class="header__notifications js_notifications">
+        <div class="notifications">
+            <ul class="notifications__list">
+
+                <li class="notifications__item">
+                    <div class="notifications__top">
+                        <div class="notifications__date">Today 09:37</div>
+                        <div class="notifications__project">Project total recall</div>
+                    </div>
+                    <div class="notifications__body">
+                        <img class="notifications__img" src="img/silvester.jpg">
+                        <div class="notifications__text"><strong class="notifications__user">Jack Nicholson</strong> just invited you to a project <a href="#" class="notifications__link"><strong>Totall recall</strong></a></div>
+                        <div class="notifications__btns">
+                            <a class="btn-round notifications__btn">
+                                <span class="visually-hidden">accept</span>
+                                <svg width="12" height="9" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 4l3 3L10.5.7" stroke-width="2" fill="none" fill-rule="evenodd"/>
+                                </svg>
+                            </a>
+                            <a class="btn-round btn-round--decline notifications__btn">
+                                <span class="visually-hidden">decline</span>
+                                <svg width="9" height="9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.4 9.4"><path d="M9.4 1.4L8 0 4.7 3.3 1.4 0 0 1.4l3.3 3.3L0 8l1.4 1.4L4.7 6 8 9.5 9.4 8 6 4.7z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="notifications__item">
+                    <div class="notifications__top">
+                        <div class="notifications__date">Today 10:01</div>
+                        <div class="notifications__project">Project total recall</div>
+                    </div>
+                    <div class="notifications__body">
+                        <img class="notifications__img" src="img/silvester.jpg">
+                        <div class="notifications__text"><strong class="notifications__user">Jack Nicholson</strong>  just finished a task <a href="#" class="notifications__link"><strong>Prepare design specs</strong></a></div>
+                    </div>
+                </li>
+
+                <li class="notifications__item">
+                    <div class="notifications__top">
+                        <div class="notifications__date">Today 09:37</div>
+                        <div class="notifications__project">Project total recall</div>
+                    </div>
+                    <div class="notifications__body">
+                        <img class="notifications__img" src="img/silvester.jpg">
+                        <div class="notifications__text"><strong class="notifications__user">Jack Nicholson</strong> just invited you to a project <a href="#" class="notifications__link"><strong>Totall recall</strong></a></div>
+                        <div class="notifications__btns">
+                            <a class="btn-round notifications__btn">
+                                <span class="visually-hidden">accept</span>
+                                <svg width="12" height="9" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg"><title>Page 1</title><path d="M1 4l3 3L10.5.7" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+                            </a>
+                            <a class="btn-round btn-round--decline notifications__btn">
+                                <span class="visually-hidden">decline</span>
+                                <svg width="9" height="9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.4 9.4"><path d="M9.4 1.4L8 0 4.7 3.3 1.4 0 0 1.4l3.3 3.3L0 8l1.4 1.4L4.7 6 8 9.5 9.4 8 6 4.7z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="notifications__item">
+                    <div class="notifications__top">
+                        <div class="notifications__date">Today 10:01</div>
+                        <div class="notifications__project">Project total recall</div>
+                    </div>
+                    <div class="notifications__body">
+                        <img class="notifications__img" src="img/silvester.jpg">
+                        <div class="notifications__text"><strong class="notifications__user">Jack Nicholson</strong>  just finished a task <a href="#" class="notifications__link"><strong>Prepare design specs</strong></a></div>
+                    </div>
+                </li>
+
+            </ul>
+
+            <div class="notifications__bottom-btn">
+                <a href="#" class="btn btn--dark-outline">Show all notifications</a>                
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<main>    
+<div class="container">
+
+    <section class="dashboard">
+        <ul class="dashboard__list clearfix"> 
+
+            <li class="dashboard__card card">
+    <div class="card__header">
+        <div class="card__header__menu context-menu js_context-menu">
+            <ul class="context-menu__list">
+                <li class="context-menu__item"><a href="#" class="context-menu__link">Project settings</a></li>
+                <li class="context-menu__item"><a href="#" class="context-menu__link">Leave project</a></li>
+                <li class="context-menu__item"><a href="#" class="context-menu__link">Archive project</a></li>
+                <li class="context-menu__item"><a href="#" class="context-menu__link">Delete project</a></li>
+            </ul>
+        </div>    
+        <div class="card__header__bg"></div>
+        <div class="card__header__top">
+            <h2 class="card__header__title">Project total recall</h2>
+            <a href="#" class="card__header__settings js_context-menu-toggle">settings</a>
+                            
+        </div>
+        <h3 class="card__header__subtitle">This is the description</h3>
+    </div>
+    <div class="card__main">
+        <ul class="user-list">
+            <li class="user-list__item" data-name="Someone Else">
+                <a href="#" class="user-list__link" ><img class="user-list__img" src="img/arnold.png"></a>
+            </li>
+            <li class="user-list__item" data-name="Someone Else">
+                <a href="#" class="user-list__link" ><img class="user-list__img" src="img/silvester.jpg"></a>
+            </li>
+            <li class="user-list__item" data-name="Silvester Stallone">
+                <a href="#" class="user-list__link user-list__link--empty" >AS</a>
+            </li>
+            <li class="user-list__item" data-name="Silvester Stallone">
+                <a href="#" class="user-list__link"><img class="user-list__img" src="img/silvester.jpg"></a>
+            </li>
+            <li class="user-list__item user-list__item--add">
+                <a href="#" class="user-list__link user-list__link--add">
+                    <svg class="user-list__plus" width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><g stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square"><path d="M4 1v6M7 4H1"/></g></svg>
+                    <span class="visually-hidden">add user</span>                                
+                </a>
+            </li>
+            <li class="user-list__item user-list__item--more">
+                <a href="#" class="user-list__link ">8 more</a>
+                <ul class="user-list__hover">
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                </ul>
+            </li>
+        </ul>
+        <hr class="card__divider">
+        <div class="card__stats">
+            <span class="card__stats__desc">Board health</span>
+            <div class="card__stats__bar">
+                <!-- style attribute and data attribute to be added dynamically -->
+                <span class="card__stats__percentage" data-percent="75%" style="width: 75%"></span>
+            </div>
+        </div>
+    </div>
+</li>           
+            <li class="dashboard__card card">
+    <div class="card__header">
+        <div class="card__header__menu context-menu js_context-menu">
+            <ul class="context-menu__list">
+                <li class="context-menu__item"><a href="#" class="context-menu__link">Project settings</a></li>
+                <li class="context-menu__item"><a href="#" class="context-menu__link">Leave project</a></li>
+                <li class="context-menu__item"><a href="#" class="context-menu__link">Archive project</a></li>
+                <li class="context-menu__item"><a href="#" class="context-menu__link">Delete project</a></li>
+            </ul>
+        </div>    
+        <div class="card__header__bg"></div>
+        <div class="card__header__top">
+            <h2 class="card__header__title">Project total recall</h2>
+            <a href="#" class="card__header__settings js_context-menu-toggle">settings</a>
+                            
+        </div>
+        <h3 class="card__header__subtitle">This is the description</h3>
+    </div>
+    <div class="card__main">
+        <ul class="user-list">
+            <li class="user-list__item" data-name="Someone Else">
+                <a href="#" class="user-list__link" ><img class="user-list__img" src="img/arnold.png"></a>
+            </li>
+            <li class="user-list__item" data-name="Someone Else">
+                <a href="#" class="user-list__link" ><img class="user-list__img" src="img/silvester.jpg"></a>
+            </li>
+            <li class="user-list__item" data-name="Silvester Stallone">
+                <a href="#" class="user-list__link user-list__link--empty" >AS</a>
+            </li>
+            <li class="user-list__item" data-name="Silvester Stallone">
+                <a href="#" class="user-list__link"><img class="user-list__img" src="img/silvester.jpg"></a>
+            </li>
+            <li class="user-list__item user-list__item--add">
+                <a href="#" class="user-list__link user-list__link--add">
+                    <svg class="user-list__plus" width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><g stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square"><path d="M4 1v6M7 4H1"/></g></svg>
+                    <span class="visually-hidden">add user</span>                                
+                </a>
+            </li>
+            <li class="user-list__item user-list__item--more">
+                <a href="#" class="user-list__link ">8 more</a>
+                <ul class="user-list__hover">
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                </ul>
+            </li>
+        </ul>
+        <hr class="card__divider">
+        <div class="card__stats">
+            <span class="card__stats__desc">Board health</span>
+            <div class="card__stats__bar">
+                <!-- style attribute and data attribute to be added dynamically -->
+                <span class="card__stats__percentage" data-percent="75%" style="width: 75%"></span>
+            </div>
+        </div>
+    </div>
+</li>           
+            <li class="dashboard__card card">
+    <div class="card__header">
+        <div class="card__header__menu context-menu js_context-menu">
+            <ul class="context-menu__list">
+                <li class="context-menu__item"><a href="#" class="context-menu__link">Project settings</a></li>
+                <li class="context-menu__item"><a href="#" class="context-menu__link">Leave project</a></li>
+                <li class="context-menu__item"><a href="#" class="context-menu__link">Archive project</a></li>
+                <li class="context-menu__item"><a href="#" class="context-menu__link">Delete project</a></li>
+            </ul>
+        </div>    
+        <div class="card__header__bg"></div>
+        <div class="card__header__top">
+            <h2 class="card__header__title">Project total recall</h2>
+            <a href="#" class="card__header__settings js_context-menu-toggle">settings</a>
+                            
+        </div>
+        <h3 class="card__header__subtitle">This is the description</h3>
+    </div>
+    <div class="card__main">
+        <ul class="user-list">
+            <li class="user-list__item" data-name="Someone Else">
+                <a href="#" class="user-list__link" ><img class="user-list__img" src="img/arnold.png"></a>
+            </li>
+            <li class="user-list__item" data-name="Someone Else">
+                <a href="#" class="user-list__link" ><img class="user-list__img" src="img/silvester.jpg"></a>
+            </li>
+            <li class="user-list__item" data-name="Silvester Stallone">
+                <a href="#" class="user-list__link user-list__link--empty" >AS</a>
+            </li>
+            <li class="user-list__item" data-name="Silvester Stallone">
+                <a href="#" class="user-list__link"><img class="user-list__img" src="img/silvester.jpg"></a>
+            </li>
+            <li class="user-list__item user-list__item--add">
+                <a href="#" class="user-list__link user-list__link--add">
+                    <svg class="user-list__plus" width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><g stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square"><path d="M4 1v6M7 4H1"/></g></svg>
+                    <span class="visually-hidden">add user</span>                                
+                </a>
+            </li>
+            <li class="user-list__item user-list__item--more">
+                <a href="#" class="user-list__link ">8 more</a>
+                <ul class="user-list__hover">
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                </ul>
+            </li>
+        </ul>
+        <hr class="card__divider">
+        <div class="card__stats">
+            <span class="card__stats__desc">Board health</span>
+            <div class="card__stats__bar">
+                <!-- style attribute and data attribute to be added dynamically -->
+                <span class="card__stats__percentage" data-percent="75%" style="width: 75%"></span>
+            </div>
+        </div>
+    </div>
+</li>           
+            <li class="dashboard__card card">
+    <div class="card__header">
+        <div class="card__header__menu context-menu js_context-menu">
+            <ul class="context-menu__list">
+                <li class="context-menu__item"><a href="#" class="context-menu__link">Project settings</a></li>
+                <li class="context-menu__item"><a href="#" class="context-menu__link">Leave project</a></li>
+                <li class="context-menu__item"><a href="#" class="context-menu__link">Archive project</a></li>
+                <li class="context-menu__item"><a href="#" class="context-menu__link">Delete project</a></li>
+            </ul>
+        </div>    
+        <div class="card__header__bg"></div>
+        <div class="card__header__top">
+            <h2 class="card__header__title">Project total recall</h2>
+            <a href="#" class="card__header__settings js_context-menu-toggle">settings</a>
+                            
+        </div>
+        <h3 class="card__header__subtitle">This is the description</h3>
+    </div>
+    <div class="card__main">
+        <ul class="user-list">
+            <li class="user-list__item" data-name="Someone Else">
+                <a href="#" class="user-list__link" ><img class="user-list__img" src="img/arnold.png"></a>
+            </li>
+            <li class="user-list__item" data-name="Someone Else">
+                <a href="#" class="user-list__link" ><img class="user-list__img" src="img/silvester.jpg"></a>
+            </li>
+            <li class="user-list__item" data-name="Silvester Stallone">
+                <a href="#" class="user-list__link user-list__link--empty" >AS</a>
+            </li>
+            <li class="user-list__item" data-name="Silvester Stallone">
+                <a href="#" class="user-list__link"><img class="user-list__img" src="img/silvester.jpg"></a>
+            </li>
+            <li class="user-list__item user-list__item--add">
+                <a href="#" class="user-list__link user-list__link--add">
+                    <svg class="user-list__plus" width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><g stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square"><path d="M4 1v6M7 4H1"/></g></svg>
+                    <span class="visually-hidden">add user</span>                                
+                </a>
+            </li>
+            <li class="user-list__item user-list__item--more">
+                <a href="#" class="user-list__link ">8 more</a>
+                <ul class="user-list__hover">
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                    <li>Arnold Schwarzeneger</li>
+                </ul>
+            </li>
+        </ul>
+        <hr class="card__divider">
+        <div class="card__stats">
+            <span class="card__stats__desc">Board health</span>
+            <div class="card__stats__bar">
+                <!-- style attribute and data attribute to be added dynamically -->
+                <span class="card__stats__percentage" data-percent="75%" style="width: 75%"></span>
+            </div>
+        </div>
+    </div>
+</li>           
+            
+            <a href="#" class="dashboard__card card card--empty">
+                + Create new project                
+            </a>
+
+        </ul>
+    </section>
+
+</div>
+</main>
+
+<div class="modal" id="js_modal">
+    
+    <section class="modal-tabbed">
+        
+
+        <div class="modal-tabbed__header">
+            <a class="modal-tabbed__btn" role="tab" aria-selected="false" aria-controls="tab1-content" tabindex="0">
+                <svg class="modal-tabbed__ico" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19"><style>.st0{fill:#FFFFFF;}</style><g><g><g><g><g><path class="st0" d="M10.6 19h-3c-.6 0-1-.3-1-1v-.3c0-.5 0-1-.2-1.6-.4 0-.8-.3-1.2-.6l-2 .8c-.2.2-.8.2-1.2-.4L.6 13.4l-.4-.7v-.2c-.3-.5-.2-1 .2-1.2l1.7-1V9c-.3-.5-.7-.8-1-1l-.7-.5C0 7.3 0 7 0 6.5l.3-.3 1.8-3c.4-.5 1-.6 1.4-.4L4 3l1.2.5c.2 0 .4-.2.5-.3.3 0 .5-.2.8-.3V1.4l.2-.6c0-.7.4-1 1-1h3.5c.7 0 1 .3 1 1l.3 2c.4 0 .8.3 1.3.6l1.4-.6.4-.2c.7-.3 1-.2 1.4.5l1.8 3c.3.6.2 1-.3 1.4l-1.6 1v1.4l1 1 .5.3c.5.4.6 1 .3 1.4l-1.8 3c-.3.5-.8.6-1.3.4l-2-.7-1.2.7c0 .5 0 1-.2 1.5v.6c-.2.6-.5 1-1 1h-.7zm-1-1h1.9v-.6l.3-1.5c0-.5.3-.7.5-.8l1.3-.7s.4-.2.7 0l2 1 1.8-3v-.2l-.5-.4-1-1c-.7-.3-.6-.8-.5-1V9c0-.3 0-.6.3-.8L18 7l-1.8-3H15.5L14 5h-.6c-.5-.6-1-.8-1.4-1-.2 0-.4-.3-.5-.6l-.2-2V1H7.7v.6L7.3 3c0 .4-.3.6-.5.7L6 4l-.6.5H5L3.6 4 3 3.7l-2 3 .4.4 1.3 1c.4.3.5.7.4 1v1.2s0 .5-.2.7L1 12l.6 1L3 15.2l2-1h.7l1.3 1s.4 0 .4.5c0 .6 0 1.2.2 1.8v.4h2zm4-2.7zM17 8.6zm-16-2zm4-3zm.3 0zm7.3-.5zm-.2 0zm-3 10.6c-1 0-2-.4-3-1.2-.7-.8-1-1.8-1-3 0-2.2 1.8-4 4-4 1.2 0 2.3.4 3 1.2 1 .8 1.3 1.8 1.3 3 0 2.2-2 4-4.2 4zm0-7.2c-1.7 0-3 1.4-3 3 0 1 .2 1.7.8 2.3.6.6 1.4 1 2.3 1 1.8 0 3.2-1.5 3.2-3.2 0-.8-.3-1.6-1-2.2-.5-.6-1.3-1-2.2-1z"/></g></g></g></g></g></svg>
+                <span id="tab1-description">Project Settings</span>
+            </a>
+            <a class="modal-tabbed__btn" role="tab" aria-selected="true" aria-controls="tab2-content" tabindex="0">
+                <svg class="modal-tabbed__ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.7 20.7" width="20" height="20"><style>.st0{fill:#FFFFFF;}</style><path class="st0" d="M10.4 0C4.6 0 0 4.6 0 10.4c0 1.2.2 2.4.6 3.6l1-.3c-.5-1-.7-2-.7-3.2C1 5.2 5 1 10.3 1s9.3 4.2 9.3 9.4-4.2 9.3-9.3 9.3c-2.5 0-4.8-1-6.6-2.7h1.7v-1H2v3.5h1v-1.8c2 2 4.6 3 7.4 3 5.7 0 10.3-4.6 10.3-10.3S16 0 10.4 0z"/><path class="st0" d="M14 7.2L9.3 12 6.7 9 6 10l3.3 3.3L14.7 8z"/></svg>
+                <span id="tab2-description">Restore tasks</span>
+            </a>
+            <a class="modal-tabbed__close" href="#" id="js_modal-close">close</a>
+        </div>
+
+        <ul class="modal-tabbed__tabs" role="tablist">
+            <li id="tab1-content" class="modal-tabbed__tab" role="tabpanel" aria-labelledby="tab1-description" aria-hidden="true">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </li>
+            <li id="tab2-content" class="modal-tabbed__tab" role="tabpanel" aria-labelledby="tab2-description" aria-hidden="false">
+                
+                <section class="restore-tasks">
+                    <div class="restore-tasks__notice">
+                        <div class="restore-tasks__notice__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3.7 10.3" width="3.5"><style>.st1{fill:#85929F;enable-background:new ;}</style><path class="st1" d="M2.4 3.2H3L2 8V8.6c0 .2 0 .4.2.6l.5.2H3l.7-.3v.7l-1.3.4-1 .2c-.4 0-.7 0-1-.3s0-.5 0-.8V9v-.7l.8-3.8L0 4.3v-.5l2.4-.6zM2.7 0c.3 0 .5 0 .7.2.2.2.3.4.3.7 0 .2 0 .4-.3.6-.3.2-.5.3-1 .3 0 0-.4 0-.5-.3L1.5 1c0-.2 0-.5.3-.7 0-.2.4-.3.7-.3z"/></svg>
+                        </div>
+                        Restored tasks will apear in the Todo column
+                    </div>
+                    <ul>
+                        <li class="restore-tasks__task">
+                            <img class="restore-tasks__img" src="img/silvester.jpg">
+                            <div class="restore-tasks__text">
+                                <h4 class="restore-tasks__title">This is a task with a longer name than usual</h4>
+                                <p class="restore-tasks__description">A description of a long task</p>
+                            </div>
+                            <div class="restore-tasks__btns">
+                                <a class="btn btn--dark-outline restore-tasks__btn">
+                                    restore
+                                </a>
+                            </div>
+                        </li>
+                        <li class="restore-tasks__task">
+                            <img class="restore-tasks__img" src="img/silvester.jpg">
+                            <div class="restore-tasks__text">
+                                <h4 class="restore-tasks__title">This is a task with a longer name than usual</h4>
+                                <p class="restore-tasks__description">A description of a long task</p>
+                            </div>
+                            <div class="restore-tasks__btns">
+                                <a class="btn btn--dark-outline restore-tasks__btn">
+                                    restore
+                                </a>
+                            </div>
+                        </li>
+                        <li class="restore-tasks__task">
+                            <img class="restore-tasks__img" src="img/silvester.jpg">
+                            <div class="restore-tasks__text">
+                                <h4 class="restore-tasks__title">This is a task with a longer name than usual</h4>
+                                <p class="restore-tasks__description">A description of a long task</p>
+                            </div>
+                            <div class="restore-tasks__btns">
+                                <a class="btn btn--dark-outline restore-tasks__btn">
+                                    restore
+                                </a>
+                            </div>
+                        </li>
+                        <li class="restore-tasks__task">
+                            <div class="restore-tasks__img restore-tasks__img--no-user">
+                                <img class="restore-tasks__img" src="img/no-user.svg">
+                            </div>
+                            <div class="restore-tasks__text">
+                                <h4 class="restore-tasks__title">This is a task with a longer name than usual</h4>
+                                <p class="restore-tasks__description">A description of a long task</p>
+                            </div>
+                            <div class="restore-tasks__btns">
+                                <a class="btn btn--dark-outline btn--checked restore-tasks__btn">
+                                    restored
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+            </li>          
+        </ul> 
+
+
+    </section>
+    
+</div>
+
+<script type="text/javascript">
+    var userMenuToggle = document.querySelector('#js_user-menu-toggle');
+    var userMenu = document.querySelector('#js_user-menu');
+    userMenuToggle.addEventListener("click",function(e){
+        userMenu.classList.toggle('header__menu--visible');
+    });
+
+    var contextMenu = document.querySelector('.js_context-menu');
+    var contextMenuToggle = document.querySelector('.js_context-menu-toggle');
+    contextMenuToggle.addEventListener("click",function(e){
+        contextMenu.classList.toggle('card__header__menu--visible');
+    });
+
+    // var restoreTasks = document.querySelector('.js_restore-tasks');
+    // var restoreTasksToggle = document.querySelector('.js_restore-tasks-toggle');
+    // restoreTasksToggle.addEventListener("click",function(e){
+    //     restoreTasks.classList.toggle('header__restore-tasks--visible');
+    // });
+
+</script>
+</body>
+</html>

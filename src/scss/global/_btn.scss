@@ -1,4 +1,5 @@
 .btn {
+    $this: &;
     display: inline-flex;
     align-items: center;
     font-size: 1.4rem;
@@ -10,6 +11,7 @@
     color: $c4;
     background-color: transparent;
     font-weight: 400;
+    transition: all .3s;
 
     &--gradient {
         color: $c1;
@@ -33,8 +35,24 @@
     }
 
     &--dark-outline {
-        color: $c12;
-        border-color: $c12;
+        color: $c3;
+        border-color: $c3;
+        
+        &#{$this}--checked {
+            color: $c4;
+            border-color: $c4;
+            &:before {
+                margin-right: .5rem;
+                content: '';
+                width: 1rem;
+                height: .7rem;
+                background-image: url(../img/check-restored-task.svg);
+            }
+        }
+        &:hover {
+            color: $c1;
+            background-color: $c3;
+        }
     }
 
 }
