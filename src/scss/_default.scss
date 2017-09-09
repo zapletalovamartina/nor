@@ -179,6 +179,12 @@ ul {
     }
 }
 
+.description {
+    font-style: italic;
+    font-size: 1.3rem;
+    color: $c9;
+}
+
 @media(min-width: $sm * 1em) {
     .container {
         padding: 0 4%;

@@ -1,0 +1,143 @@
+.general-settings {
+
+    $this: &;
+
+    text-align: center;
+
+    &__inputs {
+        text-align: left;
+        margin-bottom: 5rem;
+    }
+
+    &__label {
+        text-align: left;
+    }
+
+    &__input {
+        text-align: left !important;
+        color: $c6 !important;
+        border-color: $c4 !important;
+        font-family: 
+        &--lg {
+            font-weight: 500 !important;
+            font-size: 2rem !important;
+        }
+        @include placeholder {
+            text-align: left !important;     
+        }
+    }
+
+    &__input-wrap {
+        &:not(:last-child) {
+            margin-bottom: 3rem;            
+        }
+    }
+
+    &__card {
+        position: relative;
+        min-height: 12rem;
+        font-size: 1.4rem;
+
+        &__text {
+            position: relative;
+            color: $c1;
+        }
+
+        &--bg {
+            background-image: $gr1;
+        }
+    }
+
+    &__picker {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        align-items: center;
+        &__notice {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-right: 2rem;
+            white-space: nowrap;
+        }
+        &__desc {
+            text-align: left;
+        }
+        &__list {
+            display: flex;
+            align-items: center;
+            padding: .5rem 0;
+        }
+        &__item {
+            display: inline-block;
+            margin-right: 1rem;
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+        &__input:checked + #{$this}__picker__label {
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-image: url(../img/check-user.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 9px;
+            }
+            transform: scale(1.2);
+        }
+        &__label {
+            position: relative;
+            display: inline-block;
+            left: 0;
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all .3s;
+            &--red {
+                background-color: $c15;
+            }
+            &--orange {
+                background-color: $c16;
+            }
+            &--yellow {
+                background-color: $c17;
+            }
+            &--green {
+                background-color: $c18;
+            }
+            &--cyan {
+                background-color: $c19;
+            }
+            &--azure {
+                background-color: $c20;
+            }
+            &--blue {
+                background-color: $c21;
+            }
+            &--purple {
+                background-color: $c22;
+            }
+
+            &:hover {
+                opacity: .5;
+            }
+        }
+    }
+
+    @media(min-width: $sm * 1em) {
+        &__inputs,
+        &__colours {
+            lost-column: 1/2;
+        }
+        &__picker {
+            &__desc {
+                text-align: center;
+            }
+        }
+    }
+}
