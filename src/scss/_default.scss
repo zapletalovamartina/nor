@@ -113,6 +113,14 @@ main {
     padding-top: 7.5rem;
     min-height: 100vh;
     background-color: $c5;
+
+    &.empty {
+        padding: 3rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 .clearfix:after,
@@ -182,13 +190,7 @@ ul {
     color: $c9;
 }
 
-main.empty {
-    padding-top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+
 
 @media(min-width: $sm * 1em) {
     .container {
