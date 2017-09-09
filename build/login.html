@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smudi</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500" rel="stylesheet">
+</head>
+<body>
+
+
+<main class="empty">
+
+    <h1 class="header__logo header__logo--standalone"><a  href="#">smudi</a></h1>
+        
+    <section class="modal-general modal-general--shadow">
+        <div class="modal-general__header">
+            <div class="modal-general__text-wrap">                        
+                <h2 class="modal-general__heading">Log in</h2>
+            </div>
+            <div class="input-animated__outer-wrap">
+                
+                <div class="input-animated">
+                    <input type="email" class="input-animated__input" name="email" id="email" >
+                    <label for="email" class="input-animated__label">E-mail</label>
+                    <!-- icons are all hidden by default - you must add display:block to them dynamically -->
+                    <div class="input-animated__icon input-animated__icon--correct-fade">
+                        <svg width="9" height="7" viewBox="0 0 9 7" xmlns="http://www.w3.org/2000/svg"><path d="M1 3l2.5 2.5L8 1" stroke-width="2" stroke="#B6CCCC" fill="none" fill-rule="evenodd"/></svg>
+                    </div>
+                    <div class="input-animated__icon input-animated__icon--correct">
+                        <svg width="9" height="7" viewBox="0 0 9 7" xmlns="http://www.w3.org/2000/svg"><path d="M1 3l2.5 2.5L8 1" stroke-width="2" stroke="#68DE0C" fill="none" fill-rule="evenodd"/></svg>
+                    </div>
+                    <div class="input-animated__icon input-animated__icon--error">
+                        <svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><g stroke-width="2" fill="none" fill-rule="evenodd"><path d="M1 7.7L7.7 1" stroke="#FF3F56"/><path d="M7.7 7.7L1 1" stroke="#FF2F49"/></g></svg>
+                    </div>
+                </div>
+
+                <div class="input-animated">                        
+                    <input type="password" class="input-animated__input" name="password" id="password" >
+                    <label for="password" class="input-animated__label">Password</label>
+                </div>
+
+            </div>
+            <div class="modal-general__btn-wrap">
+                <a class="modal-general__btn btn btn--large btn--dark btn--disabled">Sign up</a>
+            </div>
+        </div>
+    </section>
+
+    <p>Don’t have an account? <a href="#">Sign up.</a></p>
+    <p><a href="#">Forgot password?</a></p>
+        
+</main>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+    // add class to inputs if not empty
+    var inputs = $('.input-animated__input');
+    inputs.on("keyup",function(e){
+        console.log(this.value);
+        if (this.value) {
+            $(this).addClass('input-animated__input--filled')
+        } else {
+            $(this).removeClass('input-animated__input--filled')            
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,5 +1,6 @@
 input[type=text],
-input[type=email] {
+input[type=email],
+input[type=password] {
     font-family: 'Montserrat', sans-serif;
     max-width: 28rem;
     width: 100%;
@@ -8,7 +9,9 @@ input[type=email] {
     background-color: transparent;
     font-size: 1.6rem;
     border-bottom: .1rem solid rgba($c1, .3);
-    text-align: center;     
+    text-align: center;
+    // remove FF default invalid styles
+    box-shadow: none;   
     @include placeholder {
         color: $c4;
         text-align: center;     
@@ -26,4 +29,83 @@ label {
     color: $c9;
     letter-spacing: .1em;
     text-align: center;
+}
+
+.input-animated {
+    $this: &;
+    max-width: 32rem;
+    height: 4.3rem;
+    position: relative;
+    margin: auto;
+    margin-bottom: 3rem;
+    
+    &__outer-wrap {
+        margin-top: 6.5rem;
+        margin-bottom: 6.5rem;
+    }
+    &__input {
+        outline: none;
+        padding: 0 !important;
+        text-align: left !important;
+        border-color: $c4 !important;
+        text-align: left;
+        max-width: none !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: $c6 !important;
+        transition: border-color .3s;
+        &:focus {
+            border-color: $c6 !important;
+        }
+        &:focus + #{$this}__label,
+        &#{$this}__input--filled + label {
+            transform-origin: 0% 50%;
+            transform: translate3d(0, -2.5rem, 0) scale3d(0.7, 0.7, 1) translateZ(1px);
+        }
+    }
+    &__label {
+        line-height: 1.15;
+        text-align: left;
+        padding: .75em 0;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        float: right;
+        font-size: 1.6rem;
+        color: $c4;
+        text-transform: none;
+        transition: all .3s;
+    }
+
+    &__icon {
+        position: absolute;
+        right: 0;
+        top: calc(50% - 1.15rem);
+        width: 2.3rem;
+        height: 2.3rem;
+        border: .1rem solid;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+
+        &--correct-fade {
+            border-color: $c4;
+        }
+
+        &--correct {
+            border-color: $c18;
+        }
+
+        &--error {
+            border-color: $c15
+        }
+    }
+    
 }

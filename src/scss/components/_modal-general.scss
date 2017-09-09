@@ -10,6 +10,11 @@
     width: 50rem;
     max-width: 100%;
 
+    &--shadow {
+        box-shadow: $bs1;
+        margin-bottom: 5rem;
+    }
+
     &__close {
         display: block;
         position: absolute;
@@ -30,6 +35,9 @@
         margin-bottom: .25em;
         &--mb {
             margin-bottom: 1em;
+        }
+        &--light {
+            font-weight: 100;
         }
     }
 
