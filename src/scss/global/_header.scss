@@ -1,9 +1,13 @@
 .header {
     color: $c6;
     border-bottom: .1rem solid rgba($c7, .5);
+    @media(max-width: $sm * 1em) {
+        color:$c1;
+        background: $c6;
+    }
     &__container {
         height: 7rem;
-        max-width: calc( #{$headerContainer} + 4rem );
+        max-width: calc( #{$headerContainer} + 4rem);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -15,6 +19,10 @@
     }
     &__nav {
         margin-left: 2rem;
+        
+        @media(max-width: $sm * 1em) {
+            display: none;
+        }
     }
     &__logo {
         font-size: 2.4rem;
@@ -37,8 +45,12 @@
             background-color: $c7;
             vertical-align: -.2rem;
             margin-left: 2rem;
+            @media(max-width: $sm * 1em) {
+                display: none;
+            }
         }
     }
+    
     &__user {
         display: flex;
         align-items: center;
@@ -79,6 +91,11 @@
             display: flex;
         }
         &__name {
+            
+            @media(max-width: $sm * 1em) {
+                    display:none;
+                }
+            
             &:after {
                 content: '';
                 display: inline-block;
@@ -105,11 +122,33 @@
         opacity: 0;
         transition: all .4s;
         z-index: 1;
+        @media(max-width: $sm * 1em) {
+            background: $c6;
+            transition: visibility .4s, transform .4s;
+            top:4.7rem;
+        }
         &--visible {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
+            @media(max-width: $sm * 1em) {
+                width:100vw;
+                right: -2rem;
+            }
         }
+        
+        &__content--desktop {
+            @media(max-width: $sm * 1em) {
+                display: none;
+            }
+        }
+        &__content--mobile {
+            display: none;
+            @media(max-width: $sm * 1em) {
+                display: block;
+            }
+        }
+        
         &__heading {
             margin-bottom: 3rem;
         }
@@ -120,7 +159,7 @@
         }
         &__nav-item {
             &:not(:last-child) {
-                margin-bottom: .5rem;                
+                margin-bottom: .5rem;
             }
         }
         &__nav-link {
@@ -146,6 +185,10 @@
                 background-repeat: no-repeat;
                 margin-right: .5rem;
                 vertical-align: sub;
+                @media(max-width: $sm * 1em) {
+                    -webkit-filter: grayscale(100%) brightness(8);
+                    filter: grayscale(100%) brightness(8);
+                }
             }
         }
     }

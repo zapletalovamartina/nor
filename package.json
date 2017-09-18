@@ -22,24 +22,27 @@
     "gulp-file-include": "^1.2.0",
     "gulp-if": "latest",
     "gulp-ignore": "latest",
-    "gulp-imagemin": "latest",
+    "gulp-imagemin": "^3.3.0",
     "gulp-jshint": "latest",
     "gulp-livereload": "latest",
     "gulp-load-plugins": "^1.5.0",
     "gulp-merge": "latest",
     "gulp-minify-css": "latest",
     "gulp-notify": "latest",
-    "gulp-postcss": "latest",
+    "gulp-postcss": "^7.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "latest",
-    "gulp-sourcemaps": "latest",
+    "gulp-sourcemaps": "^2.6.1",
     "gulp-svg-sprite": "latest",
     "gulp-uglify": "latest",
     "imagemin-mozjpeg": "latest",
     "imagemin-pngquant": "latest",
     "imagemin-svgo": "latest",
     "jshint-stylish": "latest",
-    "lost": "^8.0.0",
+    "lost": "^8.2.0",
     "yargs": "^7.0.2"
+  },
+  "dependencies": {
+    "imagemin-mozjpeg": "^6.0.0"
   }
 }

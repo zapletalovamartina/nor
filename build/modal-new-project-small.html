@@ -10,10 +10,10 @@
 
 <header class="header">
     <div class="header__container container">
-        
+
         <div class="header__links">
-            <h1 class="header__logo"><a  href="#">smudi</a></h1>
-            <nav class="header__nav nav">
+            <h1 class="header__logo"><a href="#">smudi</a></h1>
+            <nav class="header__nav desktop__nav nav">
                 <ul class="nav__list">
                     <li class="nav__item">
                         <a href="#" class="nav__link nav__link--active">Projects</a>
@@ -34,14 +34,38 @@
                 <span class="header__user__name">Arnold Schwarzeneger</span>
 
                 <div class="header__menu" id="js_user-menu">
-                    <h3 class="header__menu__heading">My profile</h3>
-                    <ul class="header__menu__nav">
-                        <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">Project settings</a></li>
-                        <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">Company settings</a></li>
-                    </ul>
-                    <a href="#" class="header__menu__logout">Logout</a>
+                    <div class="header__menu__content--desktop">
+                        <h3 class="header__menu__heading">My profile</h3>
+                        <ul class="header__menu__nav">
+                            <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">Project settings</a></li>
+                            <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">Company settings</a></li>
+                        </ul>
+                        <a href="#" class="header__menu__logout">Logout</a>
+                    </div>
+
+                    <div class="header__menu__content--mobile">
+                        <nav class="header__menu__mobile__nav nav">
+                            <ul class="nav__list">
+                                <li class="nav__item">
+                                    <a href="#" class="nav__link nav__link--active">Projects</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <figure class="header__user__profile">
+                            <img class="img" src="img/arnold.png">
+                            <span class="name">Arnold Schwarzeneger</span>
+                        </figure>
+                        <ul class="header__menu__nav">
+                            <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">My profile</a></li>
+                            <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">Project settings</a></li>
+                            <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">Company settings</a></li>
+                        </ul>
+
+                    </div>
+
+
                 </div>
-                
+
             </a>
         </div>
     </div>
@@ -80,7 +104,7 @@
                     </div>
                     <div class="notifications__body">
                         <img class="notifications__img" src="img/silvester.jpg">
-                        <div class="notifications__text"><strong class="notifications__user">Jack Nicholson</strong>  just finished a task <a href="#" class="notifications__link"><strong>Prepare design specs</strong></a></div>
+                        <div class="notifications__text"><strong class="notifications__user">Jack Nicholson</strong> just finished a task <a href="#" class="notifications__link"><strong>Prepare design specs</strong></a></div>
                     </div>
                 </li>
 
@@ -112,19 +136,20 @@
                     </div>
                     <div class="notifications__body">
                         <img class="notifications__img" src="img/silvester.jpg">
-                        <div class="notifications__text"><strong class="notifications__user">Jack Nicholson</strong>  just finished a task <a href="#" class="notifications__link"><strong>Prepare design specs</strong></a></div>
+                        <div class="notifications__text"><strong class="notifications__user">Jack Nicholson</strong> just finished a task <a href="#" class="notifications__link"><strong>Prepare design specs</strong></a></div>
                     </div>
                 </li>
 
             </ul>
 
             <div class="notifications__bottom-btn">
-                <a href="#" class="btn btn--dark-outline">Show all notifications</a>                
+                <a href="#" class="btn btn--dark-outline">Show all notifications</a>
             </div>
         </div>
 
     </div>
 </header>
+
 
 <main>    
 <div class="container">
