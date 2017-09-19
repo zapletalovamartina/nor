@@ -30,12 +30,12 @@
             </a>
 
             <a class="header__user__profile" href="#" id="js_user-menu-toggle">
-
                 <img class="header__user__img" src="img/arnold.png">
                 <span class="header__user__name">Arnold Schwarzeneger</span>
 
+
                 <div class="header__menu" id="js_user-menu">
-                    <div class="header__menu__content--desktop">
+                    <div class="header__menu__content-desktop">
                         <h3 class="header__menu__heading">My profile</h3>
                         <ul class="header__menu__nav">
                             <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">Project settings</a></li>
@@ -44,7 +44,7 @@
                         <a href="#" class="header__menu__logout">Logout</a>
                     </div>
 
-                    <div class="header__menu__content--mobile">
+                    <div class="header__menu__content-mobile">
                         <nav class="header__menu__mobile__nav nav">
                             <ul class="nav__list">
                                 <li class="nav__item">
@@ -52,16 +52,23 @@
                                 </li>
                             </ul>
                         </nav>
-                        <figure class="header__user__profile">
+                        <div class="header__menu__content-mobile-user">
                             <img class="img" src="img/arnold.png">
                             <span class="name">Arnold Schwarzeneger</span>
-                        </figure>
+                        </div>
                         <ul class="header__menu__nav">
                             <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">My profile</a></li>
                             <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">Project settings</a></li>
                             <li class="header__menu__nav-item"><a href="#" class="header__menu__nav-link">Company settings</a></li>
                         </ul>
+                        <a href="#" class="header__menu__logout">Logout</a>
 
+                        <div class="header__menu__searchbar">
+                            <form>
+                                <input type="text" name="searchbar" placeholder="Search..." />
+                                <input type="submit" value="Search" name="submit_search" />
+                            </form>
+                        </div>
                     </div>
 
 

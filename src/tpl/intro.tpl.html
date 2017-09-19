@@ -28,9 +28,14 @@
 
 <script type="text/javascript">
     var userMenuToggle = document.querySelector('#js_user-menu-toggle');
+    var userMenuToggleMobile = document.querySelector('#js_user-menu-toggle-mobile');
     var userMenu = document.querySelector('#js_user-menu');
     userMenuToggle.addEventListener("click",function(e){
         userMenu.classList.toggle('header__menu--visible');
+    });
+    userMenuToggleMobile.addEventListener("click",function(e){
+        userMenu.classList.toggle('header__menu--visible');
+        userMenuToggleMobile.classList.toggle('header__menu__mobile--open');
     });
     var modal = document.querySelector('#js_modal');
     var modalClose = document.querySelector('#js_modal-close');
