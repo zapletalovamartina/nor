@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,9 +8,10 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
 </head>
-<body>
 
-<header class="header">
+<body class="modal-open">
+
+    <header class="header">
     <div class="header__container container">
 
         <div class="header__links">
@@ -159,13 +161,13 @@
 </header>
 
 
-<main>    
-<div class="container">
+    <main>
+        <div class="container">
 
-    <section class="dashboard">
-        <ul class="dashboard__list clearfix"> 
+            <section class="dashboard">
+                <ul class="dashboard__list clearfix">
 
-            <li class="dashboard__card card">
+                    <li class="dashboard__card card">
     <div class="card__header">
         <div class="card__header__menu context-menu js_context-menu">
             <ul class="context-menu__list">
@@ -226,8 +228,7 @@
             </div>
         </div>
     </div>
-</li>           
-            <li class="dashboard__card card">
+</li> <li class="dashboard__card card">
     <div class="card__header">
         <div class="card__header__menu context-menu js_context-menu">
             <ul class="context-menu__list">
@@ -288,8 +289,7 @@
             </div>
         </div>
     </div>
-</li>           
-            <li class="dashboard__card card">
+</li> <li class="dashboard__card card">
     <div class="card__header">
         <div class="card__header__menu context-menu js_context-menu">
             <ul class="context-menu__list">
@@ -350,8 +350,7 @@
             </div>
         </div>
     </div>
-</li>           
-            <li class="dashboard__card card">
+</li> <li class="dashboard__card card">
     <div class="card__header">
         <div class="card__header__menu context-menu js_context-menu">
             <ul class="context-menu__list">
@@ -412,107 +411,108 @@
             </div>
         </div>
     </div>
-</li>           
-            
-            <a href="#" class="dashboard__card card card--empty">
+</li>
+
+                    <a href="#" class="dashboard__card card card--empty">
                 + Create new project                
             </a>
 
-        </ul>
-    </section>
+                </ul>
+            </section>
 
-</div>
-</main>
-
-<div class="modal" id="js_modal">
-    
-    <section class="modal-tabbed">
-        
-
-        <div class="modal-tabbed__header">
-            <a class="modal-tabbed__btn" role="tab" aria-selected="true" aria-controls="tab1-content" tabindex="0">
-                <svg class="modal-tabbed__ico" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19"><style>.st0{fill:#FFFFFF;}</style><g><g><g><g><g><path class="st0" d="M10.6 19h-3c-.6 0-1-.3-1-1v-.3c0-.5 0-1-.2-1.6-.4 0-.8-.3-1.2-.6l-2 .8c-.2.2-.8.2-1.2-.4L.6 13.4l-.4-.7v-.2c-.3-.5-.2-1 .2-1.2l1.7-1V9c-.3-.5-.7-.8-1-1l-.7-.5C0 7.3 0 7 0 6.5l.3-.3 1.8-3c.4-.5 1-.6 1.4-.4L4 3l1.2.5c.2 0 .4-.2.5-.3.3 0 .5-.2.8-.3V1.4l.2-.6c0-.7.4-1 1-1h3.5c.7 0 1 .3 1 1l.3 2c.4 0 .8.3 1.3.6l1.4-.6.4-.2c.7-.3 1-.2 1.4.5l1.8 3c.3.6.2 1-.3 1.4l-1.6 1v1.4l1 1 .5.3c.5.4.6 1 .3 1.4l-1.8 3c-.3.5-.8.6-1.3.4l-2-.7-1.2.7c0 .5 0 1-.2 1.5v.6c-.2.6-.5 1-1 1h-.7zm-1-1h1.9v-.6l.3-1.5c0-.5.3-.7.5-.8l1.3-.7s.4-.2.7 0l2 1 1.8-3v-.2l-.5-.4-1-1c-.7-.3-.6-.8-.5-1V9c0-.3 0-.6.3-.8L18 7l-1.8-3H15.5L14 5h-.6c-.5-.6-1-.8-1.4-1-.2 0-.4-.3-.5-.6l-.2-2V1H7.7v.6L7.3 3c0 .4-.3.6-.5.7L6 4l-.6.5H5L3.6 4 3 3.7l-2 3 .4.4 1.3 1c.4.3.5.7.4 1v1.2s0 .5-.2.7L1 12l.6 1L3 15.2l2-1h.7l1.3 1s.4 0 .4.5c0 .6 0 1.2.2 1.8v.4h2zm4-2.7zM17 8.6zm-16-2zm4-3zm.3 0zm7.3-.5zm-.2 0zm-3 10.6c-1 0-2-.4-3-1.2-.7-.8-1-1.8-1-3 0-2.2 1.8-4 4-4 1.2 0 2.3.4 3 1.2 1 .8 1.3 1.8 1.3 3 0 2.2-2 4-4.2 4zm0-7.2c-1.7 0-3 1.4-3 3 0 1 .2 1.7.8 2.3.6.6 1.4 1 2.3 1 1.8 0 3.2-1.5 3.2-3.2 0-.8-.3-1.6-1-2.2-.5-.6-1.3-1-2.2-1z"/></g></g></g></g></g></svg>
-                <span id="tab1-description">Project Settings</span>
-            </a>
-            <a class="modal-tabbed__btn" role="tab" aria-selected="false" aria-controls="tab2-content" tabindex="0">
-                <svg class="modal-tabbed__ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.7 20.7" width="20" height="20"><style>.st0{fill:#FFFFFF;}</style><path class="st0" d="M10.4 0C4.6 0 0 4.6 0 10.4c0 1.2.2 2.4.6 3.6l1-.3c-.5-1-.7-2-.7-3.2C1 5.2 5 1 10.3 1s9.3 4.2 9.3 9.4-4.2 9.3-9.3 9.3c-2.5 0-4.8-1-6.6-2.7h1.7v-1H2v3.5h1v-1.8c2 2 4.6 3 7.4 3 5.7 0 10.3-4.6 10.3-10.3S16 0 10.4 0z"/><path class="st0" d="M14 7.2L9.3 12 6.7 9 6 10l3.3 3.3L14.7 8z"/></svg>
-                <span id="tab2-description">Restore tasks</span>
-            </a>
-            <a class="modal-tabbed__close" href="#" id="js_modal-close">close</a>
         </div>
+    </main>
 
-        <ul class="modal-tabbed__tabs" role="tablist">
-            <li id="tab1-content" class="modal-tabbed__tab" role="tabpanel" aria-labelledby="tab1-description" aria-hidden="false">
-                
-                <section class="general-settings">
-                    <div class="general-settings__columns clearfix">
-                        <div class="general-settings__inputs">
-                            <div class="general-settings__input-wrap">                        
-                                <label for="new-project-name" class="general-settings__label">Project title</label>
-                                <input type="text" class="general-settings__input general-settings__input--lg" name="new-project-name" id="new-project-name" placeholder="Add a project name" value="Project total recall">
-                            </div>
-                            <div class="general-settings__input-wrap">                        
-                                <label for="new-project-description" class="general-settings__label">Project description</label>
-                                <input type="text" class="general-settings__input" name="new-project-description" id="new-project-description" placeholder="Add a description (optional)" value="This is the description">
-                            </div>
-                        </div>
-                        <div class="general-settings__colours">
-                            <!-- NO BG -->
-                            <!--
+    <div class="modal" id="js_modal">
+        <div class='modal-container'>
+            <section class="modal-tabbed">
+
+
+                <div class="modal-tabbed__header">
+                    <a class="modal-tabbed__btn" role="tab" aria-selected="true" aria-controls="tab1-content" tabindex="0">
+                        <svg class="modal-tabbed__ico" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19"><style>.st0{fill:#FFFFFF;}</style><g><g><g><g><g><path class="st0" d="M10.6 19h-3c-.6 0-1-.3-1-1v-.3c0-.5 0-1-.2-1.6-.4 0-.8-.3-1.2-.6l-2 .8c-.2.2-.8.2-1.2-.4L.6 13.4l-.4-.7v-.2c-.3-.5-.2-1 .2-1.2l1.7-1V9c-.3-.5-.7-.8-1-1l-.7-.5C0 7.3 0 7 0 6.5l.3-.3 1.8-3c.4-.5 1-.6 1.4-.4L4 3l1.2.5c.2 0 .4-.2.5-.3.3 0 .5-.2.8-.3V1.4l.2-.6c0-.7.4-1 1-1h3.5c.7 0 1 .3 1 1l.3 2c.4 0 .8.3 1.3.6l1.4-.6.4-.2c.7-.3 1-.2 1.4.5l1.8 3c.3.6.2 1-.3 1.4l-1.6 1v1.4l1 1 .5.3c.5.4.6 1 .3 1.4l-1.8 3c-.3.5-.8.6-1.3.4l-2-.7-1.2.7c0 .5 0 1-.2 1.5v.6c-.2.6-.5 1-1 1h-.7zm-1-1h1.9v-.6l.3-1.5c0-.5.3-.7.5-.8l1.3-.7s.4-.2.7 0l2 1 1.8-3v-.2l-.5-.4-1-1c-.7-.3-.6-.8-.5-1V9c0-.3 0-.6.3-.8L18 7l-1.8-3H15.5L14 5h-.6c-.5-.6-1-.8-1.4-1-.2 0-.4-.3-.5-.6l-.2-2V1H7.7v.6L7.3 3c0 .4-.3.6-.5.7L6 4l-.6.5H5L3.6 4 3 3.7l-2 3 .4.4 1.3 1c.4.3.5.7.4 1v1.2s0 .5-.2.7L1 12l.6 1L3 15.2l2-1h.7l1.3 1s.4 0 .4.5c0 .6 0 1.2.2 1.8v.4h2zm4-2.7zM17 8.6zm-16-2zm4-3zm.3 0zm7.3-.5zm-.2 0zm-3 10.6c-1 0-2-.4-3-1.2-.7-.8-1-1.8-1-3 0-2.2 1.8-4 4-4 1.2 0 2.3.4 3 1.2 1 .8 1.3 1.8 1.3 3 0 2.2-2 4-4.2 4zm0-7.2c-1.7 0-3 1.4-3 3 0 1 .2 1.7.8 2.3.6.6 1.4 1 2.3 1 1.8 0 3.2-1.5 3.2-3.2 0-.8-.3-1.6-1-2.2-.5-.6-1.3-1-2.2-1z"/></g></g></g></g></g></svg>
+                        <span id="tab1-description">Project Settings</span>
+                    </a>
+                    <a class="modal-tabbed__btn" role="tab" aria-selected="false" aria-controls="tab2-content" tabindex="0">
+                        <svg class="modal-tabbed__ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.7 20.7" width="20" height="20"><style>.st0{fill:#FFFFFF;}</style><path class="st0" d="M10.4 0C4.6 0 0 4.6 0 10.4c0 1.2.2 2.4.6 3.6l1-.3c-.5-1-.7-2-.7-3.2C1 5.2 5 1 10.3 1s9.3 4.2 9.3 9.4-4.2 9.3-9.3 9.3c-2.5 0-4.8-1-6.6-2.7h1.7v-1H2v3.5h1v-1.8c2 2 4.6 3 7.4 3 5.7 0 10.3-4.6 10.3-10.3S16 0 10.4 0z"/><path class="st0" d="M14 7.2L9.3 12 6.7 9 6 10l3.3 3.3L14.7 8z"/></svg>
+                        <span id="tab2-description">Restore tasks</span>
+                    </a>
+                    <a class="modal-tabbed__close" href="#" id="js_modal-close">close</a>
+                </div>
+
+                <ul class="modal-tabbed__tabs" role="tablist">
+                    <li id="tab1-content" class="modal-tabbed__tab" role="tabpanel" aria-labelledby="tab1-description" aria-hidden="false">
+
+                        <section class="general-settings">
+                            <h2 class="general-settings__mobile-heading">Project settings</h2><!--title of panel-->
+                            <div class="general-settings__columns clearfix">
+                                <div class="general-settings__inputs">
+                                    <div class="general-settings__input-wrap">
+                                        <label for="new-project-name" class="general-settings__label">Project title</label>
+                                        <input type="text" class="general-settings__input general-settings__input--lg" name="new-project-name" id="new-project-name" placeholder="Add a project name" value="Project total recall">
+                                    </div>
+                                    <div class="general-settings__input-wrap">
+                                        <label for="new-project-description" class="general-settings__label">Project description</label>
+                                        <input type="text" class="general-settings__input" name="new-project-description" id="new-project-description" placeholder="Add a description (optional)" value="This is the description">
+                                    </div>
+                                </div>
+                                <div class="general-settings__colours">
+                                    <!-- NO BG -->
+                                    <!--
                             <a href="#" class="general-settings__card card card--empty">
                                 + Upload a background image                
                             </a> 
                             -->
-                            <a href="#" class="general-settings__card general-settings__card--bg card card--empty">
-                                <div class="card__header__bg" style="background-image: url(img/code.jpg)"></div>
-                                <p class="general-settings__card__text">Change background image</p>
-                            </a>
-                            <div class="general-settings__picker">
-                                <span class="general-settings__picker__notice">Or set a color:</span>
-                                <ul class="general-settings__picker__list">
-                                    <li class="general-settings__picker__item">
-                                        <input class="visually-hidden general-settings__picker__input" type="radio" name="colour" value="#F53A53" id="red">
-                                        <label for="red" class="general-settings__picker__label general-settings__picker__label--red"><span class="visually-hidden">red</span></label>
-                                    </li>
-                                    <li class="general-settings__picker__item">
-                                        <input class="visually-hidden general-settings__picker__input" type="radio" name="colour" value="#F49700" id="orange">
-                                        <label for="orange" class="general-settings__picker__label general-settings__picker__label--orange"><span class="visually-hidden">orange</span></label>
-                                    </li>
-                                    <li class="general-settings__picker__item">
-                                        <input class="visually-hidden general-settings__picker__input" type="radio" name="colour" value="#F3EA00" id="yellow">
-                                        <label for="yellow" class="general-settings__picker__label general-settings__picker__label--yellow"><span class="visually-hidden">yellow</span></label>
-                                    </li>
-                                    <li class="general-settings__picker__item">
-                                        <input class="visually-hidden general-settings__picker__input" type="radio" name="colour" value="#68DE0C" id="green">
-                                        <label for="green" class="general-settings__picker__label general-settings__picker__label--green"><span class="visually-hidden">green</span></label>
-                                    </li>
-                                    <li class="general-settings__picker__item">
-                                        <input class="visually-hidden general-settings__picker__input" type="radio" name="colour" value="#17E7A6" id="cyan">
-                                        <label for="cyan" class="general-settings__picker__label general-settings__picker__label--cyan"><span class="visually-hidden">cyan</span></label>
-                                    </li>
-                                    <li class="general-settings__picker__item">
-                                        <input class="visually-hidden general-settings__picker__input" type="radio" name="colour" value="#19C3EE" id="azure">
-                                        <label for="azure" class="general-settings__picker__label general-settings__picker__label--azure"><span class="visually-hidden"></span></label>
-                                    </li>
-                                    <li class="general-settings__picker__item">
-                                        <input class="visually-hidden general-settings__picker__input" type="radio" name="colour" value="#2259D9" id="blue">
-                                        <label for="blue" class="general-settings__picker__label general-settings__picker__label--blue"><span class="visually-hidden">blue</span></label>
-                                    </li>
-                                    <li class="general-settings__picker__item">
-                                        <input class="visually-hidden general-settings__picker__input" type="radio" name="colour" value="#D300D8" id="purple">
-                                        <label for="purple" class="general-settings__picker__label general-settings__picker__label--purple"><span class="visually-hidden">purple</span></label>
-                                    </li>
-                                </ul>
+                                    <a href="#" class="general-settings__card general-settings__card--bg card card--empty">
+                                        <div class="card__header__bg" style="background-image: url(img/code.jpg)"></div>
+                                        <p class="general-settings__card__text">Change background image</p>
+                                    </a>
+                                    <div class="general-settings__picker">
+                                        <span class="general-settings__picker__notice">Or set a color:</span>
+                                        <ul class="general-settings__picker__list">
+                                            <li class="general-settings__picker__item">
+                                                <input class="visually-hidden general-settings__picker__input" type="radio" name="colour" value="#F53A53" id="red">
+                                                <label for="red" class="general-settings__picker__label general-settings__picker__label--red"><span class="visually-hidden">red</span></label>
+                                            </li>
+                                            <li class="general-settings__picker__item">
+                                                <input class="visually-hidden general-settings__picker__input" type="radio" name="colour" value="#F49700" id="orange">
+                                                <label for="orange" class="general-settings__picker__label general-settings__picker__label--orange"><span class="visually-hidden">orange</span></label>
+                                            </li>
+                                            <li class="general-settings__picker__item">
+                                                <input class="visually-hidden general-settings__picker__input" type="radio" name="colour" value="#F3EA00" id="yellow">
+                                                <label for="yellow" class="general-settings__picker__label general-settings__picker__label--yellow"><span class="visually-hidden">yellow</span></label>
+                                            </li>
+                                            <li class="general-settings__picker__item">
+                                                <input class="visually-hidden general-settings__picker__input" type="radio" name="colour" value="#68DE0C" id="green">
+                                                <label for="green" class="general-settings__picker__label general-settings__picker__label--green"><span class="visually-hidden">green</span></label>
+                                            </li>
+                                            <li class="general-settings__picker__item">
+                                                <input class="visually-hidden general-settings__picker__input" type="radio" name="colour" value="#17E7A6" id="cyan">
+                                                <label for="cyan" class="general-settings__picker__label general-settings__picker__label--cyan"><span class="visually-hidden">cyan</span></label>
+                                            </li>
+                                            <li class="general-settings__picker__item">
+                                                <input class="visually-hidden general-settings__picker__input" type="radio" name="colour" value="#19C3EE" id="azure">
+                                                <label for="azure" class="general-settings__picker__label general-settings__picker__label--azure"><span class="visually-hidden"></span></label>
+                                            </li>
+                                            <li class="general-settings__picker__item">
+                                                <input class="visually-hidden general-settings__picker__input" type="radio" name="colour" value="#2259D9" id="blue">
+                                                <label for="blue" class="general-settings__picker__label general-settings__picker__label--blue"><span class="visually-hidden">blue</span></label>
+                                            </li>
+                                            <li class="general-settings__picker__item">
+                                                <input class="visually-hidden general-settings__picker__input" type="radio" name="colour" value="#D300D8" id="purple">
+                                                <label for="purple" class="general-settings__picker__label general-settings__picker__label--purple"><span class="visually-hidden">purple</span></label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="general-settings__picker__desc description">You can only set one: image or a color</div>
+                                </div>
                             </div>
-                            <div class="general-settings__picker__desc description">You can only set one: image or a color</div>                              
-                        </div>
-                    </div>
-                    
-                    <div class="new-project__settings">
-                        <div class="new-project__settings__wrap">
 
-                            <input class="visually-hidden new-project__settings__radio" type="radio" name="visibility" value="public" id="public" checked>
-                            <label class="new-project__settings__label btn" for="public">
+                            <div class="new-project__settings">
+                                <div class="new-project__settings__wrap">
+
+                                    <input class="visually-hidden new-project__settings__radio" type="radio" name="visibility" value="public" id="public" checked>
+                                    <label class="new-project__settings__label btn" for="public">
                                 <svg class="new-project__settings__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                                   <g fill-rule="evenodd">
                                     <circle cx="8" cy="8" r="7.5"/>
@@ -522,8 +522,8 @@
                                 </svg>
                                 Public
                             </label>
-                            <input class="visually-hidden new-project__settings__radio" type="radio" name="visibility" value="private" id="private">
-                            <label class="new-project__settings__label btn" for="private">
+                                    <input class="visually-hidden new-project__settings__radio" type="radio" name="visibility" value="private" id="private">
+                                    <label class="new-project__settings__label btn" for="private">
                                 <svg class="new-project__settings__icon" width="13" height="16" viewBox="0 0 13 16" xmlns="http://www.w3.org/2000/svg">
                                   <g fill-rule="evenodd">
                                     <path class="new-project__settings__icon--fill" d="M7 11.915c.583-.206 1-.762 1-1.415C8 9.672 7.328 9 6.5 9S5 9.672 5 10.5c0 .653.417 1.21 1 1.415V13.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.585zM2 6h9c1.105 0 2 .895 2 2v6c0 1.105-.895 2-2 2H2c-1.105 0-2-.895-2-2V8c0-1.105.895-2 2-2z" />
@@ -532,106 +532,108 @@
                                 </svg>
                                 Private
                             </label>
-                            
-                        </div>
-                        <p class="new-project__settings__notice">The board is set as public. It will be visible to everyone in your team.</p>
-                    </div>
 
-                    <a class="btn btn--large btn--dark" href="#">Save</a>
-
-                </section>
-
-            </li>
-            <li id="tab2-content" class="modal-tabbed__tab" role="tabpanel" aria-labelledby="tab2-description" aria-hidden="true">
-                
-                <section class="restore-tasks">
-                    <div class="restore-tasks__notice">
-                        <div class="restore-tasks__notice__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3.7 10.3" width="3.5"><style>.st1{fill:#85929F;enable-background:new ;}</style><path class="st1" d="M2.4 3.2H3L2 8V8.6c0 .2 0 .4.2.6l.5.2H3l.7-.3v.7l-1.3.4-1 .2c-.4 0-.7 0-1-.3s0-.5 0-.8V9v-.7l.8-3.8L0 4.3v-.5l2.4-.6zM2.7 0c.3 0 .5 0 .7.2.2.2.3.4.3.7 0 .2 0 .4-.3.6-.3.2-.5.3-1 .3 0 0-.4 0-.5-.3L1.5 1c0-.2 0-.5.3-.7 0-.2.4-.3.7-.3z"/></svg>
-                        </div>
-                        Restored tasks will apear in the Todo column
-                    </div>
-                    <ul>
-                        <li class="restore-tasks__task">
-                            <img class="restore-tasks__img" src="img/silvester.jpg">
-                            <div class="restore-tasks__text">
-                                <h4 class="restore-tasks__title">This is a task with a longer name than usual</h4>
-                                <p class="restore-tasks__description">A description of a long task</p>
+                                </div>
+                                <p class="new-project__settings__notice">The board is set as public. It will be visible to everyone in your team.</p>
                             </div>
-                            <div class="restore-tasks__btns">
-                                <a class="btn btn--dark-outline restore-tasks__btn">
+
+                            <a class="btn btn--large btn--dark" href="#">Save</a>
+
+                        </section>
+
+                    </li>
+                    <li id="tab2-content" class="modal-tabbed__tab" role="tabpanel" aria-labelledby="tab2-description" aria-hidden="true">
+
+                        <section class="restore-tasks">
+                            <div class="restore-tasks__notice">
+                                <div class="restore-tasks__notice__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3.7 10.3" width="3.5"><style>.st1{fill:#85929F;enable-background:new ;}</style><path class="st1" d="M2.4 3.2H3L2 8V8.6c0 .2 0 .4.2.6l.5.2H3l.7-.3v.7l-1.3.4-1 .2c-.4 0-.7 0-1-.3s0-.5 0-.8V9v-.7l.8-3.8L0 4.3v-.5l2.4-.6zM2.7 0c.3 0 .5 0 .7.2.2.2.3.4.3.7 0 .2 0 .4-.3.6-.3.2-.5.3-1 .3 0 0-.4 0-.5-.3L1.5 1c0-.2 0-.5.3-.7 0-.2.4-.3.7-.3z"/></svg>
+                                </div>
+                                Restored tasks will apear in the Todo column
+                            </div>
+                            <ul>
+                                <li class="restore-tasks__task">
+                                    <img class="restore-tasks__img" src="img/silvester.jpg">
+                                    <div class="restore-tasks__text">
+                                        <h4 class="restore-tasks__title">This is a task with a longer name than usual</h4>
+                                        <p class="restore-tasks__description">A description of a long task</p>
+                                    </div>
+                                    <div class="restore-tasks__btns">
+                                        <a class="btn btn--dark-outline restore-tasks__btn">
                                     restore
                                 </a>
-                            </div>
-                        </li>
-                        <li class="restore-tasks__task">
-                            <img class="restore-tasks__img" src="img/silvester.jpg">
-                            <div class="restore-tasks__text">
-                                <h4 class="restore-tasks__title">This is a task with a longer name than usual</h4>
-                                <p class="restore-tasks__description">A description of a long task</p>
-                            </div>
-                            <div class="restore-tasks__btns">
-                                <a class="btn btn--dark-outline restore-tasks__btn">
+                                    </div>
+                                </li>
+                                <li class="restore-tasks__task">
+                                    <img class="restore-tasks__img" src="img/silvester.jpg">
+                                    <div class="restore-tasks__text">
+                                        <h4 class="restore-tasks__title">This is a task with a longer name than usual</h4>
+                                        <p class="restore-tasks__description">A description of a long task</p>
+                                    </div>
+                                    <div class="restore-tasks__btns">
+                                        <a class="btn btn--dark-outline restore-tasks__btn">
                                     restore
                                 </a>
-                            </div>
-                        </li>
-                        <li class="restore-tasks__task">
-                            <img class="restore-tasks__img" src="img/silvester.jpg">
-                            <div class="restore-tasks__text">
-                                <h4 class="restore-tasks__title">This is a task with a longer name than usual</h4>
-                                <p class="restore-tasks__description">A description of a long task</p>
-                            </div>
-                            <div class="restore-tasks__btns">
-                                <a class="btn btn--dark-outline restore-tasks__btn">
+                                    </div>
+                                </li>
+                                <li class="restore-tasks__task">
+                                    <img class="restore-tasks__img" src="img/silvester.jpg">
+                                    <div class="restore-tasks__text">
+                                        <h4 class="restore-tasks__title">This is a task with a longer name than usual</h4>
+                                        <p class="restore-tasks__description">A description of a long task</p>
+                                    </div>
+                                    <div class="restore-tasks__btns">
+                                        <a class="btn btn--dark-outline restore-tasks__btn">
                                     restore
                                 </a>
-                            </div>
-                        </li>
-                        <li class="restore-tasks__task">
-                            <div class="restore-tasks__img restore-tasks__img--no-user">
-                                <img class="restore-tasks__img" src="img/no-user.svg">
-                            </div>
-                            <div class="restore-tasks__text">
-                                <h4 class="restore-tasks__title">This is a task with a longer name than usual</h4>
-                                <p class="restore-tasks__description">A description of a long task</p>
-                            </div>
-                            <div class="restore-tasks__btns">
-                                <a class="btn btn--dark-outline btn--checked restore-tasks__btn">
+                                    </div>
+                                </li>
+                                <li class="restore-tasks__task">
+                                    <div class="restore-tasks__img restore-tasks__img--no-user">
+                                        <img class="restore-tasks__img" src="img/no-user.svg">
+                                    </div>
+                                    <div class="restore-tasks__text">
+                                        <h4 class="restore-tasks__title">This is a task with a longer name than usual</h4>
+                                        <p class="restore-tasks__description">A description of a long task</p>
+                                    </div>
+                                    <div class="restore-tasks__btns">
+                                        <a class="btn btn--dark-outline btn--checked restore-tasks__btn">
                                     restored
                                 </a>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
 
-            </li>          
-        </ul> 
+                    </li>
+                </ul>
 
 
-    </section>
-    
-</div>
+            </section>
+        </div>
 
-<script type="text/javascript">
-    var userMenuToggle = document.querySelector('#js_user-menu-toggle');
-    var userMenu = document.querySelector('#js_user-menu');
-    userMenuToggle.addEventListener("click",function(e){
-        userMenu.classList.toggle('header__menu--visible');
-    });
+    </div>
 
-    var contextMenu = document.querySelector('.js_context-menu');
-    var contextMenuToggle = document.querySelector('.js_context-menu-toggle');
-    contextMenuToggle.addEventListener("click",function(e){
-        contextMenu.classList.toggle('card__header__menu--visible');
-    });
+    <script type="text/javascript">
+        var userMenuToggle = document.querySelector('#js_user-menu-toggle');
+        var userMenu = document.querySelector('#js_user-menu');
+        userMenuToggle.addEventListener("click", function(e) {
+            userMenu.classList.toggle('header__menu--visible');
+        });
 
-    // var restoreTasks = document.querySelector('.js_restore-tasks');
-    // var restoreTasksToggle = document.querySelector('.js_restore-tasks-toggle');
-    // restoreTasksToggle.addEventListener("click",function(e){
-    //     restoreTasks.classList.toggle('header__restore-tasks--visible');
-    // });
+        var contextMenu = document.querySelector('.js_context-menu');
+        var contextMenuToggle = document.querySelector('.js_context-menu-toggle');
+        contextMenuToggle.addEventListener("click", function(e) {
+            contextMenu.classList.toggle('card__header__menu--visible');
+        });
 
-</script>
+        // var restoreTasks = document.querySelector('.js_restore-tasks');
+        // var restoreTasksToggle = document.querySelector('.js_restore-tasks-toggle');
+        // restoreTasksToggle.addEventListener("click",function(e){
+        //     restoreTasks.classList.toggle('header__restore-tasks--visible');
+        // });
+
+    </script>
 </body>
+
 </html>

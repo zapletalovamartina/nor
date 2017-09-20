@@ -61,6 +61,11 @@
             background-image: url(../img/bell.svg);
             display: inline-block;
             text-indent: -9999px;
+            @media(max-width: $sm * 1em) {
+                background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19"><g fill="white" fill-rule="evenodd"><path d="M10.99 1.725c.314.068.618.12.914.203.475.133.925.327 1.302.667.615.553.847 1.28.854 2.084.01.964.056 1.923.2 2.877.236 1.55.825 2.933 1.85 4.113.333.383.655.778.956 1.187.63.853.846 1.84.86 2.89 0 .026-.005.054-.01.106-.415.08-.83.165-1.246.234-3.075.51-6.172.606-9.278.5-2.05-.068-4.09-.256-6.105-.672-.407-.084-.35.02-.335-.442.04-1.24.49-2.303 1.295-3.226.52-.596 1.03-1.203 1.428-1.9.526-.923.827-1.928.953-2.98.1-.835.155-1.68.17-2.524.024-1.546.72-2.51 2.182-2.915.254-.07.515-.122.775-.166.105-.017.13-.052.137-.157C7.932.85 8.427.235 9.097.1c.97-.194 1.82.475 1.883 1.485l.01.14M7.263 17.394h4.342c-.195.737-.99 1.59-2.153 1.6-1.13.01-1.965-.798-2.19-1.6"/>
+ </g></svg>');
+
+            }
             &:after {
                 text-indent: 0;
                 content: attr(data-number);
@@ -171,8 +176,9 @@
                 margin-right: .5rem;
                 vertical-align: sub;
                 @media(max-width: $sm * 1em) {
-                    -webkit-filter: grayscale(100%) brightness(8);
-                    filter: grayscale(100%) brightness(8);
+                    background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="16"><path fill="white" fill-rule="evenodd" d="M9.3165 1.899H2.5873c.0916.0554.1492.0923.2086.126.797.4523 1.591.9084 2.392 1.3536.25.139.358.3282.358.6155-.006 2.614-.004 5.228-.004 7.842v.191H9.31v-2.88h1.051v.189c0 1.039.0003 2.078 0 3.117-.0002.447-.1885.638-.6327.638-1.3152.001-2.6305 0-3.9457 0h-.2394v.184c.0002.58.0013 1.161.0003 1.741-.001.506-.4082.744-.849.494-1.3643-.772-2.7277-1.546-4.0914-2.319-.043-.024-.083-.057-.129-.073-.39-.134-.474-.419-.473-.806.011-3.625.006-7.25.006-10.875 0-.383.213-.599.592-.599C3.654.836 6.71.836 9.766.836c.3734 0 .593.202.5938.56.003 1.376.0016 2.752.0014 4.128 0 .027-.0048.0544-.0087.096h-1.036V1.899zm2.1395 6.225H9.875c-.3924 0-.7848.0013-1.1772-.0005-.4565-.002-.7914-.314-.7942-.736-.0027-.4207.3336-.739.7893-.7403.856-.0022 1.713-.001 2.57-.001h.184c.003-.0612.007-.114.007-.1667 0-.3813.001-.7627 0-1.144-.001-.1415.033-.2655.168-.3356.139-.073.263-.035.385.054.938.683 1.877 1.363 2.815 2.046.234.171.235.399 0 .57-.938.683-1.877 1.363-2.815 2.046-.121.088-.244.132-.384.056-.132-.072-.1708-.194-.17-.336.001-.431 0-.861 0-1.314z"/>
+                    </svg>');
+
                 }
             }
         }
@@ -186,7 +192,6 @@
             min-height: calc(100vh - 70px);
             position: relative;
             height: 390px;
-            
             @media(max-width: $sm * 1em) {
                 display: block;
             }
@@ -234,7 +239,6 @@
             bottom: 0px;
             width: 100%;
             padding-bottom: 3rem;
-            
             form {
                 position: relative;
                 width: 100%;
@@ -253,15 +257,15 @@
                     }
                 }
                 input[type="submit"] {
-                    background-image: url(../img/user-arrow.svg);
+                    background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="white">
+                      <path d="M90.63 84.971l-22.5-22.5C73.05 56.311 76 48.5 76 40 76 20.12 59.88 4 40 4S4 20.12 4 40s16.12 36 36 36c8.5 0 16.311-2.95 22.471-7.87l22.5 22.5c.779.78 1.812 1.17 2.829 1.17 1.021 0 2.05-.39 2.83-1.17 1.559-1.56 1.559-4.101 0-5.659zM40 68c-15.464 0-28-12.536-28-28s12.536-28 28-28 28 12.536 28 28-12.536 28-28 28z"/>
+                    </svg>');
                     background-size: contain;
                     background-position: center;
                     background-color: transparent;
                     background-repeat: no-repeat;
                     border: 0px;
                     font-size: 0px;
-                    -webkit-filter: grayscale(100%) brightness(8);
-                    filter: grayscale(100%) brightness(8);
                     height: 1.6rem;
                     width: 1.6rem;
                     position: absolute;
@@ -272,7 +276,7 @@
             }
         }
     }
-    &__menu__mobile{
+    &__menu__mobile {
         width: 60px;
         height: 45px;
         position: relative;
@@ -286,7 +290,6 @@
         -o-transition: .5s ease-in-out;
         transition: .5s ease-in-out;
         cursor: pointer;
-        
         span {
             display: block;
             position: absolute;
@@ -302,25 +305,19 @@
             -moz-transition: .25s ease-in-out;
             -o-transition: .25s ease-in-out;
             transition: .25s ease-in-out;
-            
             &:nth-child(even) {
                 left: 50%;
                 border-radius: 0 9px 9px 0;
             }
-            
             &::nth-child(odd) {
-            left: 0px;
-            border-radius: 9px 0 0 9px;
+                left: 0px;
+                border-radius: 9px 0 0 9px;
             }
         }
-        
-        span
-        span:nth-child(1),
+        span span:nth-child(1),
         span:nth-child(2) {
             top: 0px;
         }
-
-        
         span:nth-child(3),
         span:nth-child(4) {
             top: 18px;
@@ -330,8 +327,7 @@
             top: 36px;
         }
     }
-    
-    &__menu__mobile--open{
+    &__menu__mobile--open {
         span:nth-child(1),
         span:nth-child(6) {
             -webkit-transform: rotate(45deg);
@@ -371,7 +367,6 @@
             top: 29px;
         }
     }
-    
     &__notifications {
         position: absolute;
         top: 7.1rem;

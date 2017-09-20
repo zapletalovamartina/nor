@@ -20,7 +20,11 @@
         float: none !important;
         min-height: 24rem;
         width: 52rem;
-        max-width: 100%;        
+        max-width: 100%;
+
+        @media(max-width: $sm * 1em) {
+            text-align: center;
+        }
     }
 
     &__header {

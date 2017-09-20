@@ -134,6 +134,11 @@
 
     &__settings {
         margin: 5rem 0;
+        
+        @media(max-width: $sm * 1em) {
+            margin:4rem 0rem;        
+        }
+        
         &__wrap {
             display: flex;
             justify-content: center;

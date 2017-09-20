@@ -1,59 +1,101 @@
 .general-settings {
-
     $this: &;
-
     text-align: center;
-
+    
+    &__mobile-heading{
+        display: none;
+        
+        @media(max-width: $sm * 1em) {
+            font-size:2.6rem;
+            line-height: 3.6rem;
+            font-weight: 100;
+            display: block;
+        }
+    }
+    
     &__inputs {
         text-align: left;
         margin-bottom: 5rem;
+        @media(max-width: $sm * 1em) {
+            text-align: center;
+            margin-bottom: 4rem;
+            margin-top:3rem;
+        }
     }
-
     &__label {
         text-align: left;
+        
+        @media(max-width: $sm * 1em) {
+            text-align: center;
+            font-size:1rem;
+            line-height: 1.3rem;
+        }
     }
-
     &__input {
         text-align: left !important;
         color: $c6 !important;
         border-color: $c4 !important;
-        font-family: 
-        &--lg {
+        font-family : &--lg {
             font-weight: 500 !important;
             font-size: 2rem !important;
         }
+        
+        @media(max-width: $sm * 1em) {
+            text-align: center!important;
+            max-width:100%!important;
+            font-size:1.4rem!important;
+        }
+
         @include placeholder {
-            text-align: left !important;     
+            text-align: left !important;
+            
+            @media(max-width: $sm * 1em) {
+                text-align: center!important;
+                font-size:1.2rem;
+                color:$c6!important;
+            }
         }
     }
-
     &__input-wrap {
         &:not(:last-child) {
-            margin-bottom: 3rem;            
+            margin-bottom: 3rem;
+            
+            @media(max-width: $sm * 1em) {
+                margin-bottom: 2rem;
+            }
         }
     }
-
     &__card {
         position: relative;
         min-height: 12rem;
         font-size: 1.4rem;
-
+        
+        @media(max-width: $sm * 1em) {
+                display: none;
+        }
+        
         &__text {
             position: relative;
             color: $c1;
         }
-
         &--bg {
             background-image: $gr1;
+            
         }
     }
-
+    
     &__picker {
         display: flex;
         flex-wrap: wrap;
         margin-top: 2rem;
         margin-bottom: 1.5rem;
         align-items: center;
+        
+        @media(max-width: $sm * 1em) {
+                flex-direction: column;
+                    text-align:center;
+            }    
+        
         &__notice {
             font-size: 1.2rem;
             font-weight: 500;
@@ -62,6 +104,10 @@
         }
         &__desc {
             text-align: left;
+            
+            @media(max-width: $sm * 1em) {
+                display: none;
+            }
         }
         &__list {
             display: flex;
@@ -73,8 +119,14 @@
             margin-right: 1rem;
             width: 1.8rem;
             height: 1.8rem;
+            
+            @media(max-width: $sm * 1em) {
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
         }
-        &__input:checked + #{$this}__picker__label {
+        &__input:checked+#{$this}__picker__label {
             &:before {
                 content: '';
                 position: absolute;
@@ -122,13 +174,11 @@
             &--purple {
                 background-color: $c22;
             }
-
             &:hover {
                 opacity: .5;
             }
         }
     }
-
     @media(min-width: $sm * 1em) {
         &__inputs,
         &__colours {
